@@ -13,29 +13,26 @@
 自分好みの条件でカレー屋を検索できるサイトを作成したいと思いました。
 
 ### ターゲットユーザ
-カレーが好きな人
-自分好みのカレー屋を見つけたい人
+* カレーが好きな人
+* 自分好みのカレー屋を見つけたい人
 
 ### 主な利用シーン
-カレー屋を検索する際
-自分好みのカレー屋を探す際
-気になるカレー屋のレビューを調べる際
+* カレー屋を検索する際
+* 自分好みのカレー屋を探す際
+* 気になるカレー屋のレビューを調べる際
 
 ## 設計書
- - https://app.diagrams.net/#G1qNpTVaJyft8L1K1NPshYGXMAWcAW29m8
- - https://docs.google.com/spreadsheets/d/1cqWuf8wZ_Vbz1rFqiSXV--oLRKGDMGHCn9z7fbsa7zs/edit#gid=1243549839
- - https://docs.google.com/spreadsheets/d/1mB2BacJyDOURanOYIBwKhUXNQOzf7Yd1/edit#gid=549108681
+ * https://app.diagrams.net/#G1qNpTVaJyft8L1K1NPshYGXMAWcAW29m8
+ * https://docs.google.com/spreadsheets/d/1cqWuf8wZ_Vbz1rFqiSXV--oLRKGDMGHCn9z7fbsa7zs/edit#gid=1243549839
+ * https://docs.google.com/spreadsheets/d/1mB2BacJyDOURanOYIBwKhUXNQOzf7Yd1/edit#gid=549108681
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1fFaiLKaWzeB1BsAh3J8YmIXo3RI7lnWI4mDuE_cdZxQ/edit#gid=0
 
 ## 開発環境
-- OS：Linux(CentOS)
-- 言語：HTML,CSS,JavaScript,Ruby,SQL
-- フレームワーク：Ruby on Rails
-- JSライブラリ：jQuery
-- IDE：Cloud9
+* OS：Linux(CentOS)
+* 言語：HTML,CSS,JavaScript,Ruby,SQL
+* フレームワーク：Ruby on Rails
+* JSライブラリ：jQuery
+* IDE：Cloud9
 
-## 使用素材
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
