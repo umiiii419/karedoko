@@ -1,10 +1,10 @@
 # カレドコ
 
 ## サイト概要
-好みの条件でお店を検索できるカレー専門グルメレビューサイト
+
 
 ### サイトテーマ
-好みの条件でカレー屋を検索できる、誰でも使いやすいサイト
+好みの条件でお店を検索できるカレー専門グルメレビューサイト
 
 ### テーマを選んだ理由
 私自身カレーが好きで、お店を検索していた時に「こんな機能があったらいいな」と思ったことがきっかけです。
@@ -22,10 +22,14 @@
 - 気になるカレー屋のレビューを調べる際
 
 
-## 設計書
- * https://app.diagrams.net/#G1qNpTVaJyft8L1K1NPshYGXMAWcAW29m8
- * https://docs.google.com/spreadsheets/d/1cqWuf8wZ_Vbz1rFqiSXV--oLRKGDMGHCn9z7fbsa7zs/edit#gid=1243549839
- * https://docs.google.com/spreadsheets/d/1mB2BacJyDOURanOYIBwKhUXNQOzf7Yd1/edit#gid=549108681
+## ER図
+ https://app.diagrams.net/#G1qNpTVaJyft8L1K1NPshYGXMAWcAW29m8
+ 
+## テーブル定義書
+ https://docs.google.com/spreadsheets/d/1cqWuf8wZ_Vbz1rFqiSXV--oLRKGDMGHCn9z7fbsa7zs/edit#gid=1243549839
+
+## アプリケーション詳細設計
+ https://docs.google.com/spreadsheets/d/1mB2BacJyDOURanOYIBwKhUXNQOzf7Yd1/edit#gid=549108681
 
 ## チャレンジ要素一覧
 https://docs.google.com/spreadsheets/d/1fFaiLKaWzeB1BsAh3J8YmIXo3RI7lnWI4mDuE_cdZxQ/edit#gid=0
