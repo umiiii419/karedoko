@@ -6,14 +6,17 @@ Rails.application.routes.draw do
   }
 
   devise_for :users, controllers: {
-    sessions:      'users/sessions',
-    passwords:     'users/passwords',
-    registrations: 'users/registrations'
+    sessions:      'public/sessions',
+    passwords:     'public/passwords',
+    registrations: 'public/registrations'
   }
 
-  resource :users, only: [:edit, :update]
-  get "/users/my_page", to: 'users#show'
-  get "/users/unsubscribe", to: 'users#unsubscribe'
-  patch "/users/withdrawal", to: 'users#withdrawal'
+  scope module: :public do
+    resource :users, only: [:edit, :update]
+    get "/users/my_page", to: 'users#show'
+    get "/users/unsubscribe", to: 'users#unsubscribe'
+    patch "/users/withdrawal", to: 'users#withdrawal'
+  end
+
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
