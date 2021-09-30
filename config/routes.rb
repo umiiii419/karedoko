@@ -11,5 +11,9 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
+  resource :users, only: [:edit, :update]
+  get "/users/my_page", to: 'users#show'
+  get "/users/unsubscribe", to: 'users#unsubscribe'
+  patch "/users/withdrawal", to: 'users#withdrawal'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
