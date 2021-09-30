@@ -5,18 +5,19 @@ Rails.application.routes.draw do
     registrations: 'admins/registrations'
   }
 
-  devise_for :users, controllers: {
-    sessions:      'public/sessions',
-    passwords:     'public/passwords',
-    registrations: 'public/registrations'
-  }
-
   scope module: :public do
     get "/users/my_page", to: 'users#show'
     get "/users/unsubscribe", to: 'users#unsubscribe'
     patch "/users/withdrawal", to: 'users#withdrawal'
     resource :users, only: [:edit, :update]
   end
+
+  devise_for :users, controllers: {
+    sessions:      'public/sessions',
+    passwords:     'public/passwords',
+    registrations: 'public/registrations'
+  }
+
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
