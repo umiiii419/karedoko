@@ -6,6 +6,10 @@ Rails.application.routes.draw do
     registrations: 'admins/registrations'
   }
 
+  namespace :admins do
+    resources :genres, only: [:index, :create, :edit, :update]
+  end
+
   scope module: :public do
     root to: 'homes#top'
     get "/users/my_page", to: 'users#show'
