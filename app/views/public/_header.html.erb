@@ -1,5 +1,5 @@
 <%= link_to "マイページ", users_my_page_path %>
-<%= link_to "ログアウト", destroy_user_session_path %>
+<%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
 
 <%= link_to "トップ", root_path %>
 <%#= link_to "検索", _path %>
