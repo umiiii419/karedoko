@@ -1,0 +1,7 @@
+<h4>マイページ</h4>
+
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+<%= @user.nickname %>
+<%= @user.introduction %>
+
+<%= link_to " プロフィールを編集する", edit_users_path %>
