@@ -2,7 +2,8 @@
 
 <%= form_with model:@user, url: users_path, local: true do |f| %>
 
-  <%# プロフィール画像 %>
+  <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_profile_image.jpeg" %>
+  <%= f.attachment_field :profile_image %>
 
   <%= f.label      :nickname, "ニックネーム" %>
   <%= f.text_field :nickname %>
