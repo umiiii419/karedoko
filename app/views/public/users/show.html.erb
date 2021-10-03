@@ -1,6 +1,6 @@
 <h4>マイページ</h4>
 
-<%#= @user.profile_image_id %>
+<%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
 <%= @user.nickname %>
 <%= @user.introduction %>
 
