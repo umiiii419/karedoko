@@ -6,6 +6,7 @@ class Public::ShopsController < ApplicationController
   end
 
   def show
+    @shop = Shop.find(params[:id])
   end
 
   #seach
