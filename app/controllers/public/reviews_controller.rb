@@ -6,6 +6,8 @@ class Public::ReviewsController < ApplicationController
   end
 
   def index
+    @shop = Shop.find(params[:shop_id])
+    @reviews = Review.all
   end
 
   def show
@@ -34,6 +36,7 @@ class Public::ReviewsController < ApplicationController
   end
 
   def destroy
+    @shop = Shop.find(params[:shop_id])
     @review = Review.find(params[:id])
     @review.destroy
     redirect_to shop_reviews_path
