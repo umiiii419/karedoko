@@ -18,6 +18,7 @@ Rails.application.routes.draw do
     patch     "/users/withdrawal",  to: 'users#withdrawal'
     resource  :users,               only: [:edit, :update]
     resources :shops,               only: [:index, :show]
+    resources :reviews
   end
 
   devise_for :users, controllers: {
