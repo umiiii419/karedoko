@@ -12,11 +12,12 @@ Rails.application.routes.draw do
   end
 
   scope module: :public do
-    root to: 'homes#top'
-    get      "/users/my_page",     to: 'users#show'
-    get      "/users/unsubscribe", to: 'users#unsubscribe'
-    patch    "/users/withdrawal",  to: 'users#withdrawal'
-    resource :users,               only: [:edit, :update]
+    root to:  'homes#top'
+    get       "/users/my_page",     to: 'users#show'
+    get       "/users/unsubscribe", to: 'users#unsubscribe'
+    patch     "/users/withdrawal",  to: 'users#withdrawal'
+    resource  :users,               only: [:edit, :update]
+    resources :shops,               only: [:index, :show]
   end
 
   devise_for :users, controllers: {
