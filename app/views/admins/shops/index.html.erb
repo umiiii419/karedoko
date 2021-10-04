@@ -1,0 +1,9 @@
+<h4>お店一覧</h4>
+
+<% @shops.each do |shop| %>
+  <%= attachment_image_tag shop, :image, :fill, 300, 300 %>
+  <%= link_to shop.name, admins_shop_path(shop.id) %>
+  <%= shop.genre.name %>
+  <%= shop.nearest_station %>
+  <%= shop.is_deleted ? '営業中' : '閉店' %>
+<% end %>
