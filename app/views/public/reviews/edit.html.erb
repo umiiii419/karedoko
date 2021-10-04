@@ -1,0 +1,19 @@
+<h4>レビューの編集</h4>
+
+<%= form_with(model:[@shop, @review], url: shop_review_path(@shop, @review), local: true) do |f| %>
+
+  <%= f.label                       :image, "写真を追加する" %>
+  <%= attachment_image_tag @review, :image, :fill, 300, 300 %>
+  <%= f.attachment_field            :image %>
+
+  <%= f.label      :title, "タイトル" %>
+  <%= f.text_field :title, placeholder: "タイトルを入力してください。" %>
+
+  <%= f.label      :body, "コメント" %>
+  <%= f.text_area  :body, placeholder: "コメント本文を入力してください。" %>
+
+  <%# 評価 %>
+
+  <%= f.submit "変更を保存" %>
+
+<% end %>
