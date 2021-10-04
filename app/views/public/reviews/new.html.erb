@@ -1,0 +1,17 @@
+<h4>レビューの新規登録</h4>
+
+<%= form_with model:@review, url: reviews_path, local: true do |f| %>
+
+  <%= f.label                       :image, "写真を追加する" %>
+  <%= attachment_image_tag @review, :image, :fill, 300, 300 %>
+  <%= f.attachment_field            :image %>
+
+  <%= f.label      :title, "タイトル" %>
+  <%= f.text_field :title, placeholder: "タイトルを入力してください。" %>
+
+  <%= f.label      :body, "コメント" %>
+  <%= f.text_area  :body, placeholder: "コメント本文を入力してください。" %>
+
+  <%= f.submit "投稿する" %>
+
+<% end %>
