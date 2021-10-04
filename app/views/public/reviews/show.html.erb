@@ -1,0 +1,18 @@
+<h4>レビュー詳細</h4>
+
+<%= attachment_image_tag @review, :image, :fill, 500, 500 %>
+
+<table>
+  <tr>
+    <th>タイトル</th>
+    <td><%= @review.title %></td>
+    </td>
+  </tr>
+  <tr>
+    <th>コメント</th>
+    <td><%= @review.body %></td>
+  </tr>
+</table>
+
+<%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review) %>
+<%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete  %>
