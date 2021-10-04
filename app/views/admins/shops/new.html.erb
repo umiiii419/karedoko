@@ -3,7 +3,7 @@
 <%= form_with model:@shop, url: admins_shops_path, local: true do |f| %>
 
   <%= f.label                     :image, "お店の画像" %>
-  <%= attachment_image_tag @shop, :image, :fill, 30, 30, fallback: "no_profile_image.jpeg" %>
+  <%= attachment_image_tag @shop, :image, :fill, 30, 30, fallback: "no_shop_image.jpeg" %>
   <%= f.attachment_field          :image %>
 
   <%= f.label      :name, "お店の名前" %>
