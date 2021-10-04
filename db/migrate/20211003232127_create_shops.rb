@@ -8,7 +8,7 @@ class CreateShops < ActiveRecord::Migration[5.2]
       t.string     :image_id,         null: false
       t.string     :address,          null: false
       t.string     :telephone_number, null: false
-      t.string     :opening_hours,    null:false
+      t.string     :opening_hours,    null: false
       t.string     :regular_holiday,  null: false
       t.string     :nearest_station,  null: false
       t.boolean    :is_deleted,       null: false, default: false
