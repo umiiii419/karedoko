@@ -4,6 +4,7 @@ class Admins::ShopsController < ApplicationController
   end
 
   def new
+    @shop = Shop.new
   end
 
   def create
