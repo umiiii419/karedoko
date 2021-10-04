@@ -19,9 +19,13 @@ class Admins::ShopsController < ApplicationController
   end
 
   def edit
+    @shop = Shop.find(params[:id])
   end
 
   def update
+    @shop = Shop.find(params[:id])
+    @shop.update(shop_params)
+    redirect_to admins_shop_path(@shop.id)
   end
 
   private
