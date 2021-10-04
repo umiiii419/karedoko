@@ -15,9 +15,11 @@ class Public::ReviewsController < ApplicationController
   end
 
   def create
-    @review = Review.new(review_params)
+    @shop = Shop.find(params[:shop_id])
+    @review = current_user.reviews.new(review_params)
+    @review.shop_id = @shop.id
     @review.save
-    redirect_to review_path
+    redirect_to shop_review_path(@shop, @review)
   end
 
   def update
