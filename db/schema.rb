@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_01_064210) do
+ActiveRecord::Schema.define(version: 2021_10_03_232127) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -28,6 +28,22 @@ ActiveRecord::Schema.define(version: 2021_10_01_064210) do
     t.string "name", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "shops", force: :cascade do |t|
+    t.integer "genre_id", null: false
+    t.string "name", null: false
+    t.string "name_kana", null: false
+    t.string "image_id", null: false
+    t.string "address", null: false
+    t.string "telephone_number", null: false
+    t.string "opening_hours", null: false
+    t.string "regular_holiday", null: false
+    t.string "nearest_station", null: false
+    t.boolean "is_deleted", default: false, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["genre_id"], name: "index_shops_on_genre_id"
   end
 
   create_table "users", force: :cascade do |t|

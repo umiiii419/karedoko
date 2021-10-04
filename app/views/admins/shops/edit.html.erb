@@ -1,0 +1,41 @@
+<h4>お店の編集</h4>
+
+<%= form_with model:@shop, url: admins_shop_path, local: true do |f| %>
+
+  <%= f.label                     :image, "お店の画像" %>
+  <%= attachment_image_tag @shop, :image, :fill, 500, 500, fallback: "no_shop_image.jpeg" %>
+  <%= f.attachment_field          :image %>
+
+  <%= f.label      :name, "お店の名前" %>
+  <%= f.text_field :name, placeholder: "CURRY" %>
+
+  <%= f.label      :name_kana, "店名の読み方" %>
+  <%= f.text_field :name_kana, placeholder: "カレー" %>
+
+  <%= f.label             :genre_id, "ジャンル" %>
+  <%= f.collection_select :genre_id, Genre.all, :id, :name, prompt: "--選択してください--" %>
+
+  <%= f.label      :address, "住所" %>
+  <%= f.text_field :address, placeholder: "東京都千代田区神田神保町"  %>
+
+  <%= f.label      :telephone_number, "お問い合わせ" %>
+  <%= f.text_field :telephone_number, placeholder: "000-0000-0000" %>
+
+  <%= f.label     :opening_hours, "営業時間" %>
+  <%= f.text_area :opening_hours, placeholder: "11:30~21:00 (LO : 20:30)" %>
+
+  <%= f.label     :regular_holiday, "定休日" %>
+  <%= f.text_area :regular_holiday, placeholder: "月曜日" %>
+
+  <%= f.label      :nearest_station, "最寄駅" %>
+  <%= f.text_field :nearest_station, placeholder: "神保町駅" %>
+
+  <%= f.label        :is_deleted, "営業状況" %>
+  <%= f.radio_button :is_deleted, :true %>
+  <%= f.label        :is_deleted, "営業中", value: :true %>
+  <%= f.radio_button :is_deleted, :false %>
+  <%= f.label        :is_deleted, "閉店",   value: :false %>
+
+  <%= f.submit "変更を保存" %>
+
+<% end %>
