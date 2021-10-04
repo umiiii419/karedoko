@@ -17,8 +17,9 @@ Rails.application.routes.draw do
     get       "/users/unsubscribe", to: 'users#unsubscribe'
     patch     "/users/withdrawal",  to: 'users#withdrawal'
     resource  :users,               only: [:edit, :update]
-    resources :shops,               only: [:index, :show]
-    resources :reviews
+    resources :shops,               only: [:index, :show]   do
+      resources :reviews
+    end
   end
 
   devise_for :users, controllers: {
