@@ -1,14 +1,19 @@
 <h4>お店の新規登録</h4>
 
 <%= form_with model:@shop, url: admins_shops_path, local: true do |f| %>
+
+  <%= f.label                     :image, "お店の画像" %>
+  <%= attachment_image_tag @shop, :image, :fill, 30, 30, fallback: "no_profile_image.jpeg" %>
+  <%= f.attachment_field          :image %>
+
   <%= f.label      :name, "お店の名前" %>
   <%= f.text_field :name, placeholder: "CURRY" %>
 
   <%= f.label      :name_kana, "店名の読み方" %>
   <%= f.text_field :name_kana, placeholder: "カレー" %>
 
-  <%= attachment_image_tag @shop, :image, :fill, 30, 30, fallback: "no_profile_image.jpeg" %>
-  <%= f.attachment_field            :image %>
+  <%= f.label             :genre_id, "ジャンル" %>
+  <%= f.collection_select :genre_id, Genre.all, :id, :name, prompt: "--選択してください--" %>
 
   <%= f.label      :address, "住所" %>
   <%= f.text_field :address, placeholder: "東京都千代田区神田神保町"  %>
