@@ -1,0 +1,7 @@
+<h4>レビュー一覧</h4>
+
+<% @reviews.each do |review| %>
+  <%= attachment_image_tag review, :image, :fill, 300, 300 %>
+  <%= link_to review.title, shop_review_path(@shop, review.id) %>
+  <%= review.body %>
+<% end %>
