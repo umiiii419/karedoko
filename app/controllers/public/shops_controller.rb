@@ -8,6 +8,7 @@ class Public::ShopsController < ApplicationController
     @shop = Shop.find(params[:id])
   end
 
-  #seach
+  def seach
+  end
 
 end
