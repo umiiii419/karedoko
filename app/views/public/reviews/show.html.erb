@@ -9,10 +9,24 @@
     </td>
   </tr>
   <tr>
+    <th>評価</th>
+    <td class="review-rate" data-score="<%= @review.rate %>"></td>
+  </tr>
+  <tr>
     <th>コメント</th>
     <td><%= @review.body %></td>
   </tr>
 </table>
+
+<script>
+  $('.review-rate').raty({
+    readOnly: true,
+    score:    function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
 
 <%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review) %>
 <%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete  %>
