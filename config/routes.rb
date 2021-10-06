@@ -17,10 +17,10 @@ Rails.application.routes.draw do
     get       "/users/unsubscribe", to: 'users#unsubscribe'
     patch     "/users/withdrawal",  to: 'users#withdrawal'
     resource  :users,               only: [:edit, :update]
+    get       "/shops/search",      to: 'shops#search'
     resources :shops,               only: [:index, :show]   do
       resources :reviews
     end
-    get       "/shops/search",      to: 'shops#search'
   end
 
   devise_for :users, controllers: {
