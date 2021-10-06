@@ -3,5 +3,16 @@
 <% @reviews.each do |review| %>
   <%= attachment_image_tag review, :image, :fill, 300, 300 %>
   <%= link_to review.title, shop_review_path(@shop, review.id) %>
+  <div class="review-rate" data-score="<%= review.rate %>"></div>
   <%= review.body %>
 <% end %>
+
+<script>
+  $('.review-rate').raty({
+    readOnly: true,
+    score:    function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
