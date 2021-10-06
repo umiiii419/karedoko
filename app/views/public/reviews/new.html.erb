@@ -2,18 +2,31 @@
 
 <%= form_with(model:[@shop, @review], url: shop_reviews_path, local: true) do |f| %>
 
-  <%= f.label                       :image, "写真を追加する" %>
-  <%= attachment_image_tag @review, :image, :fill, 300, 300 %>
-  <%= f.attachment_field            :image %>
-
   <%= f.label      :title, "タイトル" %>
   <%= f.text_field :title, placeholder: "タイトルを入力してください。" %>
+
+  <div id="review_stars">
+    <label>評価</label>
+  </div>
 
   <%= f.label      :body, "コメント" %>
   <%= f.text_area  :body, placeholder: "コメント本文を入力してください。" %>
 
-  <%# 評価 %>
+  <%= f.label                       :image, "写真を投稿する" %>
+  <%= attachment_image_tag @review, :image, :fill, 300, 300 %>
+  <%= f.attachment_field            :image %>
 
   <%= f.submit "投稿する" %>
 
 <% end %>
+
+<script>
+  $( '#review_stars' ).raty({
+    size       :36,
+    starOff:   "<%= asset_path('star-off.png') %>",
+    starOn:    "<%= asset_path('star-on.png') %>",
+    starHalf:  "<%= asset_path('star-half.png') %>",
+    scoreName: 'review[rate]',
+    half:      true,
+  });
+</script>
