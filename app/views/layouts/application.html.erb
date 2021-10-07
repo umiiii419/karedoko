@@ -16,12 +16,11 @@
       <%= render partial: "admins/header" %>
     <% else %>
       <%= link_to "新規登録(無料)", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
+      <%= link_to "ログイン",       new_user_session_path %></br>
 
-      <%= link_to "トップ", root_path %>
-      <%#= link_to "検索", _path %>
-      <%#= link_to "ランキング", _path %>
-      <%#= link_to "新しいレビュー", _path %>
+      <%= link_to "トップ",     root_path %>
+      <%= link_to "検索",       shops_path %>
+      <%= link_to "ランキング", shops_rank_path %>
     <% end %>
 
     <%= yield %>
