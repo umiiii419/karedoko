@@ -16,7 +16,19 @@
 <% @shops.each do |shop| %>
   <%= attachment_image_tag shop, :image, :fill, 300, 300 %>
   <%= link_to shop.name, shop_path(shop.id) %>
+  <div class="average-review-rate" data-score=<%= @average_rate %>>
+  <span>レビュー<%= shop.reviews.count %>件</span>
   <%= shop.genre.name %>
   <%= shop.nearest_station %>
   <%= shop.is_deleted ? '営業中' : '閉店' %>
 <% end %>
+
+<script>
+  $('.average-review-rate').raty({
+    readOnly: true
+    path: '/assets/'
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
