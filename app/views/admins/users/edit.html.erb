@@ -1,0 +1,27 @@
+<h4>ユーザー情報の編集</h4>
+
+<%= form_with model:@user, url: admins_user_path, local: true do |f| %>
+
+  <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_profile_image.jpeg" %>
+  <%= f.attachment_field :profile_image %>
+
+  <%= f.label      :nickname, "ニックネーム" %>
+  <%= f.text_field :nickname %>
+
+  <%= f.label     :introduction, "自己紹介" %>
+  <%= f.text_area :introduction %>
+
+  <%= f.label      :email, "メールアドレス" %>
+  <%= f.text_field :email %>
+
+  <%= f.label        :is_deleted, "ユーザー状況" %>
+  <%= f.radio_button :is_deleted, :true %>
+  <%= f.label        :is_deleted, "退会",     value: :true %>
+  <%= f.radio_button :is_deleted, :false %>
+  <%= f.label        :is_deleted, "ユーザー", value: :false %>
+
+  <%= f.submit "変更を保存" %>
+
+<% end %>
+
+<%= link_to "戻る", :back %>
