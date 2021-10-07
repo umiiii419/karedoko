@@ -2,15 +2,19 @@
 
 <table>
   <tr>
+    <th>プロフィール画像</th>
     <th>ニックネーム</th>
     <th>メールアドレス</th>
+    <th>自己紹介</th>
     <th>ユーザー状況</th>
     <th>操作</th>
   </tr>
   <% @users.each do |user| %>
   <tr>
+    <td><%= attachment_image_tag user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %></td>
     <td><%= user.nickname %></td>
     <td><%= user.email %></td>
+    <td><%= user.introduction %></td>
     <td><%= user.is_deleted ? 'ユーザー' : '退会' %></td>
     <td>
       <%= link_to "編集", edit_admins_user_path(user) %>
