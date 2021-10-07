@@ -1,0 +1,9 @@
+<h4>ランキング</h4>
+
+<% @shops.each.with_index(1) do |shop, i| %>
+  <h4>第<%= i %>位</h4>
+  <%= attachment_image_tag shop, :image, :fill, 200, 200 %>
+  <%= link_to shop_path(shop) do %>
+    <%= shop.name %></br>
+  <% end %>
+<% end %>

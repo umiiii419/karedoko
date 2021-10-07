@@ -24,4 +24,19 @@ class Public::ShopsController < ApplicationController
     @results = @q.result
   end
 
+  def rank
+    @shops = Shop.
+              left_joins(:reviews).
+              distinct.
+              sort_by do |shop|
+                hoges = shop.reviews
+                if hoges.present?
+                  hoges.map(&:rate).sum / hoges.size
+                else
+                  0
+                end
+              end.
+              reverse
+  end
+
 end

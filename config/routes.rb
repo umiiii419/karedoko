@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     patch     "/users/withdrawal",  to: 'users#withdrawal'
     resource  :users,               only: [:edit,  :update]
     get       "/shops/search",      to: 'shops#search'
+    get       "/shops/rank",        to: 'shops#rank'
     resources :shops,               only: [:index, :show]   do
       resources :reviews
     end
