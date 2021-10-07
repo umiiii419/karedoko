@@ -1,0 +1,21 @@
+<h4>ユーザー管理</h4>
+
+<table>
+  <tr>
+    <th>ニックネーム</th>
+    <th>メールアドレス</th>
+    <th>ユーザー状況</th>
+    <th>操作</th>
+  </tr>
+  <% @users.each do |user| %>
+  <tr>
+    <td><%= user.nickname %></td>
+    <td><%= user.email %></td>
+    <td><%= user.is_deleted ? 'ユーザー' : '退会' %></td>
+    <td>
+      <%= link_to "編集", edit_admins_user_path(user) %>
+      <%= link_to "削除", admins_user_path(user) %>
+    </td>
+  </tr>
+  <% end %>
+</table>
