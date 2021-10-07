@@ -15,7 +15,7 @@
     <td><%= user.nickname %></td>
     <td><%= user.email %></td>
     <td><%= user.introduction %></td>
-    <td><%= user.is_deleted ? 'ユーザー' : '退会' %></td>
+    <td><%= user.is_deleted ? '退会' : 'ユーザー' %></td>
     <td>
       <%= link_to "編集", edit_admins_user_path(user) %>
       <%= link_to "削除", admins_user_path(user) %>
