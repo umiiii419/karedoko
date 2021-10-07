@@ -7,8 +7,9 @@ Rails.application.routes.draw do
   }
 
   namespace :admins do
-    resources :genres, only: [:index, :create, :edit, :update]
-    resources :shops,  only: [:index, :new, :create, :show, :edit, :update]
+    resources :genres, only: [:index, :create, :edit,   :update]
+    resources :shops,  only: [:index, :new,    :create, :show, :edit, :update]
+    resources :users,  only: [:index, :show,   :edit,   :update]
   end
 
   scope module: :public do
@@ -16,7 +17,7 @@ Rails.application.routes.draw do
     get       "/users/my_page",     to: 'users#show'
     get       "/users/unsubscribe", to: 'users#unsubscribe'
     patch     "/users/withdrawal",  to: 'users#withdrawal'
-    resource  :users,               only: [:edit, :update]
+    resource  :users,               only: [:edit,  :update]
     get       "/shops/search",      to: 'shops#search'
     resources :shops,               only: [:index, :show]   do
       resources :reviews
