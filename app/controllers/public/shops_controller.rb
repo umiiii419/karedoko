@@ -7,6 +7,11 @@ class Public::ShopsController < ApplicationController
 
   def show
     @shop = Shop.find(params[:id])
+    if @shop.reviews.blank?
+      @average_review = 0
+    else
+      @average_review = @shop.reviews.average(:rate).round(2)
+    end
   end
 
   def search

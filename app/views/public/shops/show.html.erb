@@ -11,6 +11,13 @@
     </td>
   </tr>
   <tr>
+    <th>評価</th>
+    <td>
+      <div class="average-review-rate" data-score=<%= @average_review %>></div>
+      <span>レビュー<%= @shop.reviews.count %>件</span>
+    </td>
+  </tr>
+  <tr>
     <th>ジャンル</th>
     <td><%= @shop.genre.name %></td>
   </tr>
@@ -43,3 +50,13 @@
 <%= link_to "一覧に戻る",             shops_path %>
 <%= link_to "みんなのレビューを見る", shop_reviews_path(@shop) %>
 <%= link_to "レビューを投稿する",     new_shop_review_path(@shop) %>
+
+<script>
+  $('.average-review-rate').raty({
+    readOnly: true,
+    path: '/assets/',
+    score: function() {
+      return $(this).attr('data-score')
+    }
+  });
+</script>
