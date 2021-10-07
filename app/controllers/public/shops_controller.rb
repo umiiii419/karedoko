@@ -24,4 +24,7 @@ class Public::ShopsController < ApplicationController
     @results = @q.result
   end
 
+  def rank
+  end
+
 end
