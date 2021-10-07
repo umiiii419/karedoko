@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   namespace :admins do
     resources :genres, only: [:index, :create, :edit,   :update]
     resources :shops,  only: [:index, :new,    :create, :show, :edit, :update]
-    resources :users,  only: [:index, :show,   :edit,   :update]
+    resources :users,  only: [:index, :show,   :edit,   :update, :destroy]
   end
 
   scope module: :public do
