@@ -14,7 +14,37 @@
  *= require_self
  */
 
-.logo {
-  font-family: 'Dela Gothic One', cursive;
+ body {
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+
+header {
+    height: 150px;
 }
 
+.logo {
+    font-family: 'Dela Gothic One', cursive;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+nav {
+    width: 150px;
+}
+
+main {
+    flex: 1;
+}
+
+aside {
+    width: 150px;
+}
+
+footer {
+    height: 150px;
+}
