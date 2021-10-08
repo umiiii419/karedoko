@@ -1,7 +1,14 @@
-<h4>マイページ</h4>
+<h4>プロフィール</h4>
 
 <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
 <%= @user.nickname %>
 <%= @user.introduction %>
+
+<table>
+  <tr>
+    <th>投稿したレビュー</th>
+    <td><%= @user.reviews.count %>件</td>
+  </tr>
+</table>
 
 <%= link_to " プロフィールを編集する", edit_users_path %>
