@@ -1,5 +1,9 @@
-<h1 class="logo">カレドコ</h1>
-<%= link_to "ユーザー管理", admins_users_path %>
-<%= link_to "お店管理",     admins_shops_path %>
-<%= link_to "ジャンル管理", admins_genres_path %>
-<%= link_to "ログアウト",   destroy_admin_session_path, method: :delete %>
+<div class="header-top">
+  <h1 class="logo">カレドコ</h1>
+  <%= link_to "ログアウト",   destroy_admin_session_path, method: :delete %>
+</div>
+<div class="header-bottom">
+  <%= link_to "ユーザー管理", admins_users_path %>
+  <%= link_to "お店管理",     admins_shops_path %>
+  <%= link_to "ジャンル管理", admins_genres_path %>
+</div>
