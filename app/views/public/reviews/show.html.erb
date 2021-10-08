@@ -28,5 +28,7 @@
   });
 </script>
 
-<%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review) %>
-<%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete  %>
+<% if @review.user == current_user %>
+  <%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review) %>
+  <%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete  %>
+<% end %>
