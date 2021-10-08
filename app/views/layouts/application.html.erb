@@ -1,28 +1,48 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
   <head>
+    <meta charset="UTF-8">
     <title>Karedoko</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="reset.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <% if user_signed_in? %>
-      <%= render partial: "public/header" %>
-    <% elsif admin_signed_in? %>
-      <%= render partial: "admins/header" %>
-    <% else %>
-      <%= link_to "新規登録(無料)", new_user_registration_path %>
-      <%= link_to "ログイン",       new_user_session_path %></br>
+    <header>
+      <% if user_signed_in? %>
+        <%= render partial: "public/header" %>
+      <% elsif admin_signed_in? %>
+        <%= render partial: "admins/header" %>
+      <% else %>
+        <div class="header-top">
+          <h1 class="logo">カレドコ</h1>
+          <%= link_to "トップ",         root_path %>
+          <%= link_to "新規登録(無料)", new_user_registration_path %>
+          <%= link_to "ログイン",       new_user_session_path %>
+        </div>
+        <div class="header-bottom">
+          <%= link_to "検索",       shops_path %>
+          <%= link_to "ランキング", shops_rank_path %>
+        </div>
+      <% end %>
+    </header>
 
-      <%= link_to "トップ",     root_path %>
-      <%= link_to "検索",       shops_path %>
-      <%= link_to "ランキング", shops_rank_path %>
-    <% end %>
+    <div class="wrapper">
+      <nav></nav>
+      <main><%= yield %></main>
+      <aside></aside>
+    </div>
 
-    <%= yield %>
+    <footer></footer>
+
   </body>
 </html>
