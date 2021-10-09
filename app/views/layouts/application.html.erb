@@ -14,6 +14,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@500&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -25,9 +29,9 @@
       <% else %>
         <div class="header-top">
           <h1 class="logo">カレドコ</h1>
-          <%= link_to "トップ",         root_path %>
-          <%= link_to "新規登録(無料)", new_user_registration_path %>
-          <%= link_to "ログイン",       new_user_session_path %>
+          <%= link_to "トップ",         root_path,                  class: "nav-top" %>
+          <%= link_to "新規登録(無料)", new_user_registration_path, class: "nav-top" %>
+          <%= link_to "ログイン",       new_user_session_path,      class: "nav-top" %>
         </div>
         <div class="header-bottom">
           <%= link_to "検索",       shops_path %>

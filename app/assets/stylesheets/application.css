@@ -18,19 +18,46 @@
      min-height: 100vh;
      display: flex;
      flex-direction: column;
+     background: #F6D927;
+     font-family: 'Noto Sans JP', sans-serif;
  }
 
 header {
     height: 150px;
+    margin: 0;
+	padding: 10px;
+}
+
+.header-top {
+    display: flex;
+    border-bottom: thick double #EE5508;
+    justify-content: flex-end;
+    align-items: center;
 }
 
 .logo {
     font-family: 'Dela Gothic One', cursive;
+    margin: 10px auto 10px 10px;
+}
+
+.nav-top {
+    margin-right: 20px;
+    font-size: 19px;
+}
+
+.header-bottom {
+    display: flex;
+    border-bottom: thick double #EE5508;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    font-size: 19px;
 }
 
 .wrapper {
     display: flex;
     flex: 1;
+
 }
 
 nav {
@@ -46,5 +73,8 @@ aside {
 }
 
 footer {
-    height: 150px;
+    height: 50px;
+    border-top: thick double #EE5508;
+    margin: 0 10px;
+	padding: 0px;
 }
