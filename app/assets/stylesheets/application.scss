@@ -19,8 +19,8 @@
      min-height: 100vh;
      display: flex;
      flex-direction: column;
-     background: #F6D927;
-     font-family: 'Noto Sans JP', sans-serif;
+     background: #F9F053;
+     font-family: 'Sawarabi Gothic', sans-serif;
  }
 
 header {
@@ -31,7 +31,7 @@ header {
 
 .header-top {
     display: flex;
-    border-bottom: thick double #EE5508;
+    border-bottom: thick double #DF8C00;
     justify-content: flex-end;
     align-items: center;
 }
@@ -48,7 +48,7 @@ header {
 
 .header-bottom {
     display: flex;
-    border-bottom: thick double #EE5508;
+    border-bottom: thick double #DF8C00;
     justify-content: space-around;
     align-items: center;
     margin: 10px 0 10px 0;
@@ -58,11 +58,10 @@ header {
 .wrapper {
     display: flex;
     flex: 1;
-
 }
 
 nav {
-    width: 150px;
+    width: 100px;
 }
 
 main {
@@ -70,12 +69,12 @@ main {
 }
 
 aside {
-    width: 150px;
+    width: 100px;
 }
 
 footer {
     height: 50px;
-    border-top: thick double #EE5508;
+    border-top: thick double #DF8C00;
     margin: 0 10px;
 	padding: 0px;
 }
