@@ -1,0 +1,17 @@
+.background-image {
+  background-image: image-url('top.jpg');
+  background-size: cover;
+  background-position: center;
+  within: 100%;
+  height: 400px;
+}
+
+.content {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 90px;
+  align-items: center;
+  font-size: 35px;
+  color: black;
+}
