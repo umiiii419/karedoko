@@ -14,7 +14,7 @@ class Public::ShopsController < ApplicationController
     end
   end
 
-  def search
+  def search_result
     @q = Shop.ransack(params[:q])
     @results = @q.result
   end
