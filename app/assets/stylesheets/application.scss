@@ -61,6 +61,11 @@ header {
     font-size: 18px;
     color: black;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+.btn-top:hover {
+	color: #DF8C00;
 }
 
 .btn-bottom {
@@ -69,6 +74,11 @@ header {
     font-size: 25px;
     color: black;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+.btn-bottom:hover {
+	color: #DF8C00;
 }
 
 .wrapper {
@@ -82,6 +92,18 @@ nav {
 
 main {
     flex: 1;
+}
+
+.btn-back {
+  text-decoration: underline;
+  font-weight: bold;
+  font-size: 20px;
+  color: black;
+  transition: 0.3s;
+}
+
+.btn-back:hover {
+	color: #DF8C00;
 }
 
 aside {
