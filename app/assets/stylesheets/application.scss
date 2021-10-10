@@ -55,6 +55,22 @@ header {
     font-size: 19px;
 }
 
+.btn-top {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+}
+
+.btn-bottom {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin-left: 20px;
+}
+
 .wrapper {
     display: flex;
     flex: 1;
