@@ -1,28 +1,28 @@
 <%= stylesheet_link_tag "public/sessions", media: "all", 'data-turbolinks-track': 'reload' %>
 
 <div class="wrapper-flex">
-<div class="wrapper-login">
-  <div class="title-login">
-    <h2>メールアドレスでログイン</h2>
+  <div class="wrapper-login">
+    <div class="title-login">
+      <h2>メールアドレスでログイン</h2>
+    </div>
+  
+    <div class="login-form">
+      <%= form_with model:@user, url: user_session_path, local: true do |f| %>
+        <div class="field">
+          <%= f.label :email, "メールアドレス" %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+        <div class="field">
+          <%= f.label :password, "パスワード" %><br />
+          <%= f.password_field :password, autocomplete: "current-password" %>
+        </div>
+        <div class="actions">
+          <%= f.submit "ログイン" %>
+        </div>
+      <% end %>
+    </div>
+  
+    <%= render "public/shared/links" %>
+  
   </div>
-
-  <div class="login-form">
-    <%= form_with model:@user, url: user_session_path, local: true do |f| %>
-      <div class="field">
-        <%= f.label :email, "メールアドレス" %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-      </div>
-      <div class="field">
-        <%= f.label :password, "パスワード" %><br />
-        <%= f.password_field :password, autocomplete: "current-password" %>
-      </div>
-      <div class="actions">
-        <%= f.submit "ログイン" %>
-      </div>
-    <% end %>
-  </div>
-
-  <%= render "public/shared/links" %>
-
-</div>
 </div>
