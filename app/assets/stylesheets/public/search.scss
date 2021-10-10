@@ -1,0 +1,40 @@
+.search-box {
+    display: flex;
+    width: 100%;
+  }
+  
+  #shop_search {
+    width: 100%;
+  }
+  
+  table {
+    width: 100%;
+  }
+
+  #q_name_or_name_kana_cont {
+    height: 50px;
+    width: 100%;
+  }
+
+  #q_address_or_nearest_station_cont {
+    height: 50px;
+    width: 100%;
+  }
+
+  #q_genre_id_eq {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    display: inline-block;
+    height: 50px;
+    width: 100%;
+  }
+
+  input[type="submit"] {
+    cursor: pointer;
+    display: inline-block;
+    width: 100%;
+    height: 50px;
+    background-color: #DF8C00;
+    border: none;
+  }

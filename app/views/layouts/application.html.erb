@@ -8,12 +8,19 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+<<<<<<< HEAD
     
     <link rel="stylesheet" href="reset.css">
+=======
+>>>>>>> a41f36a54c5d75d62a584d4ab2e631e3e4269d6c
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
   </head>
 
   <body>
@@ -25,13 +32,18 @@
       <% else %>
         <div class="header-top">
           <h1 class="logo">カレドコ</h1>
-          <%= link_to "トップ",         root_path %>
-          <%= link_to "新規登録(無料)", new_user_registration_path %>
-          <%= link_to "ログイン",       new_user_session_path %>
+          <%= link_to "トップ",         root_path,                  class: "btn-top" %>
+          <%= link_to "新規登録(無料)", new_user_registration_path, class: "btn-top" %>
+          <%= link_to "ログイン",       new_user_session_path,      class: "btn-top" %>
         </div>
         <div class="header-bottom">
+<<<<<<< HEAD
           <%= link_to "検索",         shops_path %>
           <%= link_to "ランキング", shops_rank_path %>
+=======
+          <%= link_to "検索",       shops_path,      class: "btn-bottom" %>
+          <%= link_to "ランキング", shops_rank_path, class: "btn-bottom" %>
+>>>>>>> a41f36a54c5d75d62a584d4ab2e631e3e4269d6c
         </div>
       <% end %>
     </header>
