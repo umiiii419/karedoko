@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "public/passwords", media: "all", 'data-turbolinks-track': 'reload' %>
+
 <h2>Forgot your password?</h2>
 
 <%= form_for(resource, as: resource_name, url: user_password_path(resource_name), html: { method: :post }) do |f| %>
