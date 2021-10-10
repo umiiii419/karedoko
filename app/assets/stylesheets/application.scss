@@ -1,0 +1,96 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *.
+ *= require_self
+ */
+
+@import "./reset";
+
+ body {
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+     background: #F9F053;
+     font-family: 'Sawarabi Gothic', sans-serif;
+ }
+
+header {
+    height: 150px;
+    margin: 0;
+	padding: 10px;
+}
+
+.header-top {
+    display: flex;
+    border-bottom: thick double #DF8C00;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo {
+    font-family: 'Dela Gothic One', cursive;
+    margin: 10px auto 10px 10px;
+}
+
+.nav-top {
+    margin-right: 20px;
+    font-size: 19px;
+}
+
+.header-bottom {
+    display: flex;
+    border-bottom: thick double #DF8C00;
+    justify-content: space-around;
+    align-items: center;
+    margin: 10px 0 10px 0;
+    font-size: 19px;
+}
+
+.btn-top {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    margin-left: 20px;
+}
+
+.btn-bottom {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+    margin-left: 20px;
+}
+
+.wrapper {
+    display: flex;
+    flex: 1;
+}
+
+nav {
+    width: 100px;
+}
+
+main {
+    flex: 1;
+}
+
+aside {
+    width: 100px;
+}
+
+footer {
+    height: 50px;
+    border-top: thick double #DF8C00;
+    margin: 0 10px;
+	padding: 0px;
+}

@@ -1,9 +1,9 @@
 <div class="header-top">
   <h1 class="logo">カレドコ</h1>
-  <%= link_to "ログアウト",   destroy_admin_session_path, method: :delete %>
+  <%= link_to "ログアウト",   destroy_admin_session_path, method: :delete, class: "btn-top" %>
 </div>
 <div class="header-bottom">
-  <%= link_to "ユーザー管理", admins_users_path %>
-  <%= link_to "お店管理",     admins_shops_path %>
-  <%= link_to "ジャンル管理", admins_genres_path %>
+  <%= link_to "ユーザー管理", admins_users_path, class: "btn-bottom" %>
+  <%= link_to "お店管理",     admins_shops_path, class: "btn-bottom" %>
+  <%= link_to "ジャンル管理", admins_genres_path, class: "btn-bottom" %>
 </div>
