@@ -1,18 +1,30 @@
 <%= stylesheet_link_tag "public/passwords", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<h2>Forgot your password?</h2>
+<div class="wrapper-flex">
+  <div class="wrapper-login">
+    <div class="title-login">
+      <h2>パスワードの再設定</h2>
+    </div>
 
-<%= form_for(resource, as: resource_name, url: user_password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= render "public/shared/error_messages", resource: resource %>
+    <div class="signup-form">
+      <%= form_with model:@user, url: user_password_path, local: true do |f| %>
+        <%= render "public/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        <div class="field">
+          <p>
+            ご登録頂いたメールアドレスを入力してください。<br>
+            新しいパスワードを再発行いたします。
+          </p>
+          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+        </div>
+
+        <div class="actions">
+          <%= f.submit "再発行" %>
+        </div>
+      <% end %>
+    </div>
+
+    <%= render "public/shared/links" %>
+
   </div>
-
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
-<% end %>
-
-<%= render "public/shared/links" %>
+</div>
