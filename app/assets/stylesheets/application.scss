@@ -61,6 +61,11 @@ header {
     font-size: 18px;
     color: black;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+.btn-top:hover {
+	color: #DF8C00;
 }
 
 .btn-bottom {
@@ -69,6 +74,11 @@ header {
     font-size: 25px;
     color: black;
     margin-left: 20px;
+    transition: 0.3s;
+}
+
+.btn-bottom:hover {
+	color: #DF8C00;
 }
 
 .wrapper {
@@ -76,7 +86,7 @@ header {
     flex: 1;
 }
 
-nav {
+.nav {
     width: 100px;
 }
 
@@ -94,3 +104,4 @@ footer {
     margin: 0 10px;
 	padding: 0px;
 }
+

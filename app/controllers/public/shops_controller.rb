@@ -1,7 +1,7 @@
 class Public::ShopsController < ApplicationController
 
   def index
-    @shops = Shop.all
+    @shops = Shop.page(params[:page]).reverse_order
     @q = Shop.ransack(params[:q])
   end
 

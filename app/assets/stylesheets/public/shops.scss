@@ -1,3 +1,68 @@
-// Place all the styles related to the public/shops controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.search-box {
+  margin-top: 50px;
+  margin-bottom: 70px;
+}
+
+.shop-box {
+  display: flex;
+  border: solid 2px;
+  margin: 30px;
+  background-color: #F6C800;
+}
+
+.shop-image {
+  padding: 30px;
+}
+
+.shop-info {
+  width: 100%;
+ display: inline-block;
+ margin: auto 50px;
+ line-height: 2.5em;
+}
+
+.average-review-rate {
+
+}
+
+.btn {
+	color: black;
+	font-size: 25px;
+	font-weight: 700;
+	text-decoration: underline;
+	transition: 0.3s;
+}
+
+.btn:hover {
+	color: #DF8C00;
+}
+
+.paginate {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.pagination>li>a {
+  border: solid 2px;
+  color: black;
+
+}
+
+/*ホバー時のデザイン*/
+.pagination>li>a:hover {
+  border-radius: 15px;
+  background-color: #DF8C00;
+  border-color: #DF8C00;
+  color: black;
+}
+
+.pagination>.active>a,
+.pagination>.active>a:focus,
+.pagination>.active>a:hover,
+.pagination>.active>span,
+.pagination>.active>span:focus,
+.pagination>.active>span:hover {
+  background: #DF8C00;
+  border-color: #DF8C00;
+}
