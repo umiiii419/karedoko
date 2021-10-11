@@ -1,57 +1,65 @@
 <%= stylesheet_link_tag "public/shops", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<h4>お店詳細</h4>
+<div class="shop-list">
+  <div class="shop-box">
+    <div class="shop-image">
+      <%= attachment_image_tag @shop, :image, :fill, 500, 500 %>
+    </div>
+      <table>
+        <tr>
+          <th>お店の名前</th>
+          <td>
+            <%= @shop.name %>
+            ( <%= @shop.name_kana %> )
+          </td>
+        </tr>
+        <tr>
+          <th>評価</th>
+          <td>
+            <div class="average-review-rate" data-score=<%= @average_review %>></div>
+            <span>レビュー<%= @shop.reviews.count %>件</span>
+          </td>
+        </tr>
+        <tr>
+          <th>ジャンル</th>
+          <td><%= @shop.genre.name %></td>
+        </tr>
+        <tr>
+          <th>住所</th>
+          <td><%= @shop.address %></td>
+        </tr>
+        <tr>
+          <th>予約・お問い合わせ</th>
+          <td><%= @shop.telephone_number %></td>
+        </tr>
+        <tr>
+          <th>営業時間</th>
+          <td><%= @shop.opening_hours %></td>
+        </tr>
+        <tr>
+          <th>定休日</th>
+          <td><%= @shop.regular_holiday %></td>
+        </tr>
+        <tr>
+          <th>最寄駅</th>
+          <td><%= @shop.nearest_station %></td>
+        </tr>
+        <tr>
+          <th>営業状況</th>
+          <td><%= @shop.is_deleted ? '営業中' : '閉店' %></td>
+        </tr>
+        <tr>
+          <th></t>
+          <td>
+            <%= link_to "レビューを見る", shop_reviews_path(@shop)   , class: "btn-top" %><br>
+            <%= link_to "レビューを投稿する",     new_shop_review_path(@shop), class: "btn-top" %>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
 
-<%= attachment_image_tag @shop, :image, :fill, 500, 500 %>
-
-<table>
-  <tr>
-    <th>お店の名前</th>
-    <td>
-      <%= @shop.name %>
-      ( <%= @shop.name_kana %> )
-    </td>
-  </tr>
-  <tr>
-    <th>評価</th>
-    <td>
-      <div class="average-review-rate" data-score=<%= @average_review %>></div>
-      <span>レビュー<%= @shop.reviews.count %>件</span>
-    </td>
-  </tr>
-  <tr>
-    <th>ジャンル</th>
-    <td><%= @shop.genre.name %></td>
-  </tr>
-  <tr>
-    <th>住所</th>
-    <td><%= @shop.address %></td>
-  </tr>
-  <tr>
-    <th>予約・お問い合わせ</th>
-    <td><%= @shop.telephone_number %></td>
-  </tr>
-  <tr>
-    <th>営業時間</th>
-    <td><%= @shop.opening_hours %></td>
-  </tr>
-  <tr>
-    <th>定休日</th>
-    <td><%= @shop.regular_holiday %></td>
-  </tr>
-  <tr>
-    <th>最寄駅</th>
-    <td><%= @shop.nearest_station %></td>
-  </tr>
-  <tr>
-    <th>営業状況</th>
-    <td><%= @shop.is_deleted ? '営業中' : '閉店' %></td>
-  </tr>
-</table>
-
-<%= link_to "一覧に戻る",             shops_path %>
-<%= link_to "みんなのレビューを見る", shop_reviews_path(@shop) %>
-<%= link_to "レビューを投稿する",     new_shop_review_path(@shop) %>
 
 <script>
   $('.average-review-rate').raty({
