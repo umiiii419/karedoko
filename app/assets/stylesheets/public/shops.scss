@@ -22,26 +22,26 @@
   line-height: 2.5em;
 }
 
-table {
+.t-shop {
   margin: 20px;
   width: 100%;
 }
 
-th,td {
+.th-shop, .td-shop {
     padding: 5px 10px;
 }
 
-th {
+.th-shop {
     background-color: #DF8C00;
     color:  black;
 }
 
-td {
+.td-shop {
     background-color: #F9F053;
     padding-left: 25px;
 }
 
-tr {
+.tr-shop {
     border-bottom:  solid 1px;
 }
 
