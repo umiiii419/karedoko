@@ -1,15 +1,15 @@
 <%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
 
-
-
-<div class="my-page-box">
-  <div class="my-page">
-    <div class="my-page-title">
+<div class="wrapper-flex">
+  <div class="wrapper-user">
+    <div class="title-user">
       <h2>マイページ</h2>
     </div>
+    
     <div class="my-page-image">
       <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
     </div>
+    
     <div class="my-page-info">
       <div>
         <h2><%= @user.nickname %></h2>
@@ -24,7 +24,6 @@
           <td class-"td-mypage"><%= @user.reviews.count %>件</td>
         </tr>
       </table>
-  
       <%= link_to " プロフィールを編集する", edit_users_path, class: "btn-top" %>
     </div> 
   </div>
