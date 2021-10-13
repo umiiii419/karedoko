@@ -16,52 +16,52 @@
 @import "./reset";
 
  body {
-     min-height: 100vh;
-     display: flex;
-     flex-direction: column;
-     background: #F9F053;
-     font-family: 'Sawarabi Gothic', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Sawarabi Gothic', sans-serif;
  }
 
 header {
-    height: 150px;
-    margin: 0;
-	padding: 10px;
+  height: 150px;
+  margin: 0;
 }
 
 .header-top {
-    display: flex;
-    border-bottom: thick double #DF8C00;
-    justify-content: flex-end;
-    align-items: center;
+  height: 60px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  background: #F9F053;
 }
 
 .logo {
-    font-family: 'Dela Gothic One', cursive;
-    margin: 10px auto 10px 10px;
+  font-family: 'Dela Gothic One', cursive;
+  margin: 10px auto 10px 10px;
 }
 
 .nav-top {
-    margin-right: 20px;
-    font-size: 19px;
+  margin-right: 20px;
+  font-size: 19px;
 }
 
 .header-bottom {
-    display: flex;
-    border-bottom: thick double #DF8C00;
-    justify-content: space-around;
-    align-items: center;
-    margin: 10px 0 10px 0;
-    font-size: 19px;
+  height: 60px;
+  display: flex;
+  border-bottom: thick double #DF8C00;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 19px;
+  background: #F9F053;
 }
 
 .btn-top {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
-    color: black;
-    margin-left: 20px;
-    transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 18px;
+  color: black;
+  margin-left: 20px;
+  transition: 0.3s;
 }
 
 .btn-top:hover {
@@ -69,12 +69,12 @@ header {
 }
 
 .btn-bottom {
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    color: black;
-    margin-left: 20px;
-    transition: 0.3s;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 25px;
+  color: black;
+  margin-left: 20px;
+  transition: 0.3s;
 }
 
 .btn-bottom:hover {
@@ -82,26 +82,25 @@ header {
 }
 
 .wrapper {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
 .nav {
-    width: 100px;
+  width: 100px;
 }
 
 main {
-    flex: 1;
+  flex: 1;
 }
 
 aside {
-    width: 100px;
+  width: 100px;
 }
 
 footer {
-    height: 50px;
-    border-top: thick double #DF8C00;
-    margin: 0 10px;
-	padding: 0px;
+  height: 50px;
+  border-top: thick double #DF8C00;
+	background: #F9F053;
 }
 

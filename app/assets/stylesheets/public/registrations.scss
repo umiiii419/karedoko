@@ -1,29 +1,27 @@
-.wrapper-flex {
+.wrapper_flex {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
 }
 
-.wrapper-login {
+.wrapper_login {
   display: flex;
   flex-flow: column;
   align-items: center;
   justify-content: center;
   font-size: 14px;
   width: 50%;
-  border: solid 2px;
+  background-color: #FFF799;
 }
 
-.title-login {
+.title_login {
   display: flex;
   justify-content: center;
   width: 100%;
   margin-bottom: 40px;
-  border-bottom: solid 2px;
-  background-color: #DF8C00;
+  background-color: #FAC559;
 }
 
 .field {
@@ -66,10 +64,10 @@ input[type="submit"] {
     height: 50px;
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color: #DF8C00;
+    background-color: #FAC559;
     border: none;
 }
 
 a {
-  color: #DF8C00;
+  color: #FAC559;
 }
