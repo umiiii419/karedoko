@@ -6,8 +6,8 @@
       <h2>マイページ</h2>
     </div>
     
-    <div class="my-page-image">
-      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+    <div class="profile-image">
+      <%= attachment_image_tag @user, :profile_image, :fill, 200, 200, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
     </div>
     
     <div class="my-page-info">
@@ -24,7 +24,7 @@
           <td class-"td-mypage"><%= @user.reviews.count %>件</td>
         </tr>
       </table>
-      <%= link_to " プロフィールを編集する", edit_users_path, class: "btn-top" %>
+      <%= link_to " プロフィールを編集する", edit_users_path, class: "btn-user" %>
     </div> 
   </div>
 </div>

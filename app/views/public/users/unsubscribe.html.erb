@@ -5,7 +5,7 @@
     <div class="title-user">
       <h2>本当に退会しますか？</h2>
     </div>
-    
+
     <div class="warning">
       <h3>
         退会すると、会員登録情報が閲覧できなくなります。<br />
@@ -13,5 +13,10 @@
       </h3 >
     </div>
 
-<%= link_to "退会しない", users_my_page_path(current_user), class: "btn-user" %>
-<%= link_to "退会する", users_withdrawal_path, method: :patch, data: { comfirm: "本当に退会しますか？" }, class: "btn-user"%>
+    <div class="unsubscribe_btn">
+      <%= link_to "退会しない", users_my_page_path(current_user), class: "btn-user" %>
+      <%= link_to "退会する", users_withdrawal_path, method: :patch, data: { comfirm: "本当に退会しますか？" }, class: "btn-user"%>
+    </div>
+
+  </div>
+</div>

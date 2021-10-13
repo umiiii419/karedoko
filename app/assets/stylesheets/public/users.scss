@@ -16,7 +16,7 @@
 
 .title-user {
   border-bottom: solid 1px;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
   background-color: #DF8C00;
 }
 
@@ -42,10 +42,15 @@ h2 {
 .user-form {
   display: flex;
   justify-content: center;
+  margin-top: 100px;
 }
 
-.user-image {
-  margin-right: 100px;
+img {
+  border-radius: 1000px;
+}
+
+.user-info {
+  margin-left: 100px;
 }
 
 #user_nickname {
@@ -72,23 +77,30 @@ input[type="submit"] {
   width: 50%;
   height: 50px;
   margin-top: 70px;
-  margin-bottom: 50px;
   background-color: #DF8C00;
   border: none;
 }
 
 .btn-user {
   cursor: pointer;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: black;
   width: 50%;
   height: 50px;
-  margin-top: 30px;
+  margin: auto;
+  margin-top: 70px;
   background-color: #DF8C00;
   border: none;
-  padding: 15px;
 }
 
 .warning {
-  height: 500px;
+  height: 200px;
+  text-align: center;
+  margin-top: 200px;
+}
+
+.unsubscribe_btn {
+  line-height: 200px;
 }
