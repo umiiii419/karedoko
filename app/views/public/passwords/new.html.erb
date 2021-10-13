@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag "public/passwords", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<div class="wrapper-flex">
-  <div class="wrapper-login">
-    <div class="title-login">
+<div class="wrapper_flex">
+  <div class="wrapper_login">
+    <div class="title_login">
       <h2>パスワードの再設定</h2>
     </div>
 
-    <div class="signup-form">
+    <div class="signup_form">
       <%= form_with model:@user, url: user_password_path, local: true do |f| %>
         <%= render "public/shared/error_messages", resource: resource %>
 

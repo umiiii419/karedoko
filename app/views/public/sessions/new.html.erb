@@ -1,12 +1,12 @@
 <%= stylesheet_link_tag "public/sessions", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<div class="wrapper-flex">
-  <div class="wrapper-login">
-    <div class="title-login">
+<div class="wrapper_flex">
+  <div class="wrapper_login">
+    <div class="title_login">
       <h2>メールアドレスでログイン</h2>
     </div>
-  
-    <div class="login-form">
+
+    <div class="login_form">
       <%= form_with model:@user, url: user_session_path, local: true do |f| %>
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
@@ -21,8 +21,8 @@
         </div>
       <% end %>
     </div>
-  
+
     <%= render "public/shared/links" %>
-  
+
   </div>
 </div>
