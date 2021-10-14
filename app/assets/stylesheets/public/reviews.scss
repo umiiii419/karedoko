@@ -1,0 +1,84 @@
+.review_new_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.review_new_box {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  width: 50%;
+  background-color: #FFF799;
+}
+
+.review_new_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 40px;
+  background-color: #FAC559;
+}
+
+.review_new_form {
+  width: 80%;
+}
+
+th {
+  margin-right: 50px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+#review_title {
+  width: 100%;
+  height: 40px;
+  margin-top: 5px;
+}
+
+#review_body {
+  width: 100%;
+  height: 100px;
+  margin-top: 5px;
+}
+
+#review_stars {
+  text-align: center;
+  margin: 20px auto;
+}
+
+.review_image_field {
+  text-align: center;
+}
+
+#review_image {
+  margin: 0 auto 15px auto;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+}
+
+input[type="submit"] {
+    cursor: pointer;
+    display: inline-block;
+    width: 50%;
+    height: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: #FAC559;
+    border: none;
+}
+
+a {
+  color: #FAC559;
+}

@@ -20,17 +20,18 @@
 .shop_box {
   display: flex;
   overflow-wrap: normal;
-  border: thick double #FAC559;
+  border: solid 1px #FAC559;
   margin: 30px auto;
-  width: 70%;
+  width: 50%;
   background-color: #FFF799;
   border-radius: 10px;
 }
 
 .shop_header {
-  width: 70%;
+  width: 50%;
   margin: auto;
 }
+
 .shop_image {
   padding: 30px;
 }
@@ -41,8 +42,7 @@ img {
 
 .shop_info {
   display: inline-block;
-  margin: auto 0 auto 50px;
-  line-height: 2.5em;
+  line-height: 2em;
 }
 
 .shop_name {
@@ -78,10 +78,8 @@ td {
 
 .btn {
 	color: black;
-	font-size: 25px;
-	font-weight: 700;
+	font-size: 20px;
 	text-decoration: underline;
-	transition: 0.3s;
 }
 
 .btn:hover {
@@ -130,9 +128,13 @@ td {
 
 .shop_show_box {
   overflow-wrap: normal;
-  border: thick double #FAC559;
+  border: solid 1px #FAC559;
   margin: 30px auto;
   width: 70%;
   background-color: #FFF799;
   border-radius: 10px;
+}
+
+.shop_show_image {
+  margin: 30px 0 10px 65px;
 }

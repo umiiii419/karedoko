@@ -7,12 +7,12 @@
   <% @shops.each do |shop| %>
     <div class="shop_box">
       <div class="shop_image">
-        <%= attachment_image_tag shop, :image, :fill, 300, 300 %>
+        <%= attachment_image_tag shop, :image, :fill, 200, 200 %>
       </div>
 
       <div class="shop_info">
         <div class="shop_name">
-          <h2><%= link_to shop.name, shop_path(shop.id), class: "btn" %></h2>
+          <h3><%= link_to shop.name, shop_path(shop.id), class: "btn" %></h3>
         </div>
 
         <div>

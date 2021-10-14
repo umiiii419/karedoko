@@ -3,19 +3,19 @@
 <div class="user_wrap">
   <div class="user_box">
     <div class="user_header">
-      <h2>マイページ</h2>
+      <h4>マイページ</h4>
     </div>
 
     <div class="user_profile_image">
-      <%= attachment_image_tag @user, :profile_image, :fill, 200, 200, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+      <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
     </div>
 
     <div class="user_mypage_info">
       <div>
-        <h2><%= @user.nickname %></h2>
+        <h4><%= @user.nickname %></h4>
       </div>
       <div>
-        <h3><%= @user.introduction %></h3>
+        <h4><%= @user.introduction %></h4>
       </div>
 
       <table class="user_table">
