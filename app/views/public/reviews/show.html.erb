@@ -1,24 +1,29 @@
 <%= stylesheet_link_tag "public/reviews", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<h4>レビュー詳細</h4>
+<div class="review_wrap">
+  <div class="review_box">
+    <div class="review_image">
+      <%= attachment_image_tag @review, :image, :fill, 200, 200 %>
+    </div>
 
-<%= attachment_image_tag @review, :image, :fill, 500, 500 %>
+    <div class="review_info">
+      <div class="review_title">
+        <h4><%= @review.title %></h4>
+      </div>
 
-<table>
-  <tr>
-    <th>タイトル</th>
-    <td><%= @review.title %></td>
-    </td>
-  </tr>
-  <tr>
-    <th>評価</th>
-    <td class="review-rate" data-score="<%= @review.rate %>"></td>
-  </tr>
-  <tr>
-    <th>コメント</th>
-    <td><%= @review.body %></td>
-  </tr>
-</table>
+      <div class="review-rate" data-score="<%= @review.rate %>"></div>
+
+      <div class="review_body">
+        <%= @review.body %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% if @review.user == current_user %>
+  <%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review), class: "review_btn" %>
+  <%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete, class: "review_btn" %>
+<% end %>
 
 <script>
   $('.review-rate').raty({
@@ -30,7 +35,3 @@
   });
 </script>
 
-<% if @review.user == current_user %>
-  <%= link_to "投稿を編集する", edit_shop_review_path(@shop, @review) %>
-  <%= link_to "投稿を削除する", shop_review_path(@shop, @review), method: :delete  %>
-<% end %>

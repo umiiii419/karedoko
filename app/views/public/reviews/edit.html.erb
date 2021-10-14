@@ -1,21 +1,40 @@
 <%= stylesheet_link_tag "public/reviews", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<h4>レビューの編集</h4>
+<div class="review_new_wrap">
+  <div class="review_new_box">
+    <div class="review_new_header">
+      <h4>レビューの編集</h4>
+    </div>
 
-<%= form_with(model:[@shop, @review], url: shop_review_path(@shop, @review), local: true) do |f| %>
+    <div class="review_new_form">
+      <%= form_with(model:[@shop, @review], url: shop_review_path(@shop, @review), local: true) do |f| %>
 
-  <%= f.label                       :image, "写真を追加する" %>
-  <%= attachment_image_tag @review, :image, :fill, 300, 300 %>
-  <%= f.attachment_field            :image %>
+        <table>
+          <tr>
+            <th><%= f.label :title, "タイトル" %></th>
+            <td><%= f.text_field :title, placeholder: "タイトルを入力してください。" %></td>
+          </tr>
+          <tr>
+            <th><%= f.label :body, "コメント" %></th>
+            <td><%= f.text_area  :body, placeholder: "コメント本文を入力してください。" %></td>
+          </tr>
+          <tr>
+            <th><label>評価</label></th>
+            <td><div id="review_stars"></div></td>
+          </tr>
+          <tr>
+            <th><%= f.label :image, "写真を変更" %></th>
+            <td>
+              <%= attachment_image_tag @review, :image, :fill, 250, 150 %>
+              <%= f.attachment_field            :image %>
+            </td>
+          </tr>
+        </table>
 
-  <%= f.label      :title, "タイトル" %>
-  <%= f.text_field :title, placeholder: "タイトルを入力してください。" %>
-
-  <%= f.label      :body, "コメント" %>
-  <%= f.text_area  :body, placeholder: "コメント本文を入力してください。" %>
-
-  <%# 評価 %>
-
-  <%= f.submit "変更を保存" %>
-
-<% end %>
+        <div class="actions">
+          <%= f.submit "変更を保存" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

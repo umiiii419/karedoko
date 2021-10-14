@@ -30,7 +30,11 @@
   width: 80%;
 }
 
-th {
+table {
+  margin: 0 auto;
+}
+
+label {
   margin-right: 50px;
 }
 
@@ -81,4 +85,52 @@ input[type="submit"] {
 
 a {
   color: #FAC559;
+}
+
+
+.review_box {
+  display: flex;
+  overflow-wrap: normal;
+  border: solid 1px #FAC559;
+  margin: 30px auto;
+  width: 50%;
+  background-color: #FFF799;
+  border-radius: 10px;
+}
+
+.review_image {
+  padding: 30px;
+}
+
+img {
+  border-radius: 10px;
+}
+
+.review_info {
+  display: inline-block;
+  line-height: 2em;
+  padding: 20px;
+}
+
+.review_header {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.review_btn {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: black;
+  width: 30%;
+  height: 50px;
+  margin: 20px auto;
+  background-color: #FAC559;
+}
+
+.btn {
+  color: black;
+	font-size: 19px;
+	text-decoration: underline;
 }
