@@ -1,45 +1,42 @@
-.search-box {
-    padding: 10px;
-  }
+.search_box {
+  padding: 10px;
+  margin: 0 30px;
+}
 
-  #shop_search {
-    width: 100%;
-  }
+#shop_search {
+  width: 100%;
+}
 
-  h2 {
-    margin-left: 25px;
-  }
+table {
+  width: 100%;
+}
 
-  table {
-    width: 100%;
-  }
+#q_name_or_name_kana_cont {
+  height: 50px;
+  width: 98%;
+  border: solid 1px;
+}
 
-  #q_name_or_name_kana_cont {
-    height: 50px;
-    width: 98%;
-    border: solid 1px;
-  }
+#q_address_or_nearest_station_cont {
+  height: 50px;
+  width: 98%;
+  border: solid 1px;
+}
 
-  #q_address_or_nearest_station_cont {
-    height: 50px;
-    width: 98%;
-    border: solid 1px;
-  }
+#q_genre_id_eq {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  height: 50px;
+  width: 98%;
+}
 
-  #q_genre_id_eq {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    display: inline-block;
-    height: 50px;
-    width: 98%;
-  }
-
-  input[type="submit"] {
-    cursor: pointer;
-    display: inline-block;
-    width: 100%;
-    height: 50px;
-    background-color: #FAC559;
-    border: none;
-  }
+input[type="submit"] {
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+  height: 50px;
+  background-color: #FAC559;
+  border: none;
+}

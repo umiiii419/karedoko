@@ -1,12 +1,11 @@
-.wrapper_flex {
+.signup_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 30px;
 }
 
-.wrapper_login {
+.signup_box {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -16,38 +15,40 @@
   background-color: #FFF799;
 }
 
-.title_login {
+.signup_header {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
-  margin-bottom: 40px;
+  height: 50px;
+  margin-bottom: 20px;
   background-color: #FAC559;
 }
 
-.field {
-  margin-bottom: 15px;
+.signup_form {
+  width: 50%;
 }
 
 #user_email {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }
 
 #user_nickname {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }
 
 #user_password {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }
 
 #user_password_confirmation {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }

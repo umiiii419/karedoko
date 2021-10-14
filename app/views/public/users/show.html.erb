@@ -1,31 +1,30 @@
 <%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<div class="wrapper-flex">
-  <div class="wrapper-user">
-    <div class="title-user">
-      <h2>マイページ</h2>
+<div class="user_wrap">
+  <div class="user_box">
+    <div class="user_header">
+      <h4>マイページ</h4>
     </div>
-    
-    <div class="profile-image">
-      <%= attachment_image_tag @user, :profile_image, :fill, 200, 200, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+
+    <div class="user_profile_image">
+      <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
     </div>
-    
-    <div class="my-page-info">
+
+    <div class="user_mypage_info">
       <div>
-        <h2><%= @user.nickname %></h2>
+        <h4><%= @user.nickname %></h4>
       </div>
       <div>
-        <h3><%= @user.introduction %></h3>
+        <h4><%= @user.introduction %></h4>
       </div>
-      
-      <table class="t-mypage">
-        <tr class="tr-mypage">
-          <th class="th-myoage">投稿したレビュー</th>
-          <td class-"td-mypage"><%= @user.reviews.count %>件</td>
+
+      <table class="user_table">
+        <tr>
+          <th>投稿したレビュー</th>
+          <td><%= @user.reviews.count %>件</td>
         </tr>
       </table>
-      <%= link_to " プロフィールを編集する", edit_users_path, class: "btn-user" %>
-    </div> 
+      <%= link_to " プロフィールを編集する", edit_users_path, class: "user_btn" %>
+    </div>
   </div>
 </div>
-

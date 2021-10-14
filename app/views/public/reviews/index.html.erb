@@ -1,11 +1,31 @@
-<h4>レビュー一覧</h4>
+<%= stylesheet_link_tag "public/reviews", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<% @reviews.each do |review| %>
-  <%= attachment_image_tag review, :image, :fill, 300, 300 %>
-  <%= link_to review.title, shop_review_path(@shop, review.id) %>
-  <div class="review-rate" data-score="<%= review.rate %>"></div>
-  <%= review.body %>
-<% end %>
+
+<div class="review_header">
+  <h4>すべてのレビュー</h4>
+</div>
+<div class="review_wrap">
+
+  <% @reviews.each do |review| %>
+    <div class="review_box">
+      <div class="review_image">
+        <%= attachment_image_tag review, :image, :fill, 150, 150 %>
+      </div>
+
+      <div class="review_info">
+        <div class="review_title">
+         <h4><%= link_to review.title, shop_review_path(@shop, review.id), class: "btn" %></h4>
+        </div>
+
+        <div class="review-rate" data-score="<%= review.rate %>"></div>
+
+        <div class="review_body">
+          <%= review.body %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
 
 <script>
   $('.review-rate').raty({

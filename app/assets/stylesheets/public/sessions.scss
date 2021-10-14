@@ -1,12 +1,11 @@
-.wrapper_flex {
+.login_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-top: 20px;
 }
 
-.wrapper_login {
+.login_box {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -16,26 +15,28 @@
   background-color: #FFF799;
 }
 
-.title_login {
+.login_header {
   display: flex;
   justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 50px;
   margin-bottom: 50px;
   background-color: #FAC559;
 }
 
-.field {
-  margin-bottom: 15px;
+.login_form {
+  width: 50%;
 }
 
 #user_email {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }
 
 #user_password {
-  width: 300px;
+  width: 100%;
   height: 30px;
   margin-top: 5px;
 }

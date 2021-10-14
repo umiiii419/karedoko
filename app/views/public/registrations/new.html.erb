@@ -1,25 +1,25 @@
 <%= stylesheet_link_tag "public/registrations", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<div class="wrapper_flex">
-  <div class="wrapper_login">
-    <div class="title_login">
-      <h2>メールアドレスで新規会員登録</h2>
+<div class="signup_wrap">
+  <div class="signup_box">
+    <div class="signup_header">
+      <h4>メールアドレスで新規会員登録</h4>
     </div>
-    
+
     <div class="signup_form">
       <%= form_with model:@user, url: user_registration_path, local: true do |f| %>
         <%= render "public/shared/error_messages", resource: resource %>
-      
+
         <div class="field">
           <%= f.label :email, "メールアドレス" %><br />
           <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
         </div>
-      
+
         <div class="field">
           <%= f.label :nickname, "ニックネーム" %><br />
           <%= f.text_field :nickname, autofocus: true %>
         </div>
-      
+
         <div class="field">
           <%= f.label :password, "パスワード" %>
           <% if @minimum_password_length %>
@@ -27,18 +27,18 @@
           <% end %><br />
           <%= f.password_field :password, autocomplete: "new-password" %>
         </div>
-      
+
         <div class="field">
           <%= f.label :password_confirmation, "パスワード ( 確認 ) " %><br />
           <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
         </div>
-      
+
         <div class="actions">
           <%= f.submit "登録" %>
         </div>
       <% end %>
       </div>
-      
+
     <%= render "public/shared/links" %>
 
   </div>

@@ -1,24 +1,38 @@
-.search-box {
+.search_box {
   display: flex;
 }
 
-.shop-list {
+.search_table {
+  border: none;
+  border-radius: 0;
+}
+
+.search_td {
+  background-color: white;
+  border: none;
+  padding: 0;
+}
+
+.shop_wrap {
   margin: 0 20px;
 }
 
-.shop-box {
+.shop_box {
   display: flex;
-  border: thick double #FAC559;
-  margin: 30px;
+  overflow-wrap: normal;
+  border: solid 1px #FAC559;
+  margin: 30px auto;
+  width: 50%;
   background-color: #FFF799;
   border-radius: 10px;
 }
 
-.shop-main {
-  display: flex;
+.shop_header {
+  width: 50%;
+  margin: auto;
 }
 
-.shop-image {
+.shop_image {
   padding: 30px;
 }
 
@@ -26,53 +40,53 @@ img {
   border-radius: 10px;
 }
 
-.shop-info {
-  width: 100%;
+.shop_info {
   display: inline-block;
-  margin: auto 50px;
-  line-height: 2.5em;
+  line-height: 2em;
 }
 
-.t-shop {
-  margin: 30px 30px 30px 0;
-  width: 100%;
+.shop_name {
+  word-break: normal;
+}
+
+table {
+  margin: 30px auto;
+  width: 70%;
   border: 1px solid #DF8C00;
   border-collapse: separate;
   border-radius: 10px;
   overflow: hidden;
 }
 
-.th-shop, .td-shop {
+tr {
+  border: solid 1px white;
+}
+
+th, td {
   padding: 5px 10px;
   border: 1px solid #F6AE54;
 }
 
-.th-shop {
+th {
   background-color: #FAC559;
 }
 
-.td-shop {
+td {
   padding-left: 25px;
   background-color: #FFF799;
 }
 
-.tr-shop {
-  border: solid 1px white;
-}
-
 .btn {
 	color: black;
-	font-size: 25px;
-	font-weight: 700;
+	font-size: 20px;
 	text-decoration: underline;
-	transition: 0.3s;
 }
 
 .btn:hover {
 	color: #DF8C00;
 }
 
-.btn_shop {
+.shop_btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -95,7 +109,6 @@ img {
   color: #DF8C00;
 }
 
-/*ホバー時のデザイン*/
 .pagination>li>a:hover {
   border-radius: 15px;
   background-color: #FAC559;
@@ -111,4 +124,17 @@ img {
 .pagination>.active>span:hover {
   background: #FAC559;
   border-color: #FAC559;
+}
+
+.shop_show_box {
+  overflow-wrap: normal;
+  border: solid 1px #FAC559;
+  margin: 30px auto;
+  width: 70%;
+  background-color: #FFF799;
+  border-radius: 10px;
+}
+
+.shop_show_image {
+  margin: 30px 0 10px 65px;
 }
