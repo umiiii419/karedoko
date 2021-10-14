@@ -25,6 +25,10 @@ class Public::UsersController < ApplicationController
     reset_session
     redirect_to root_path
   end
+  
+  def reviews
+    @my_reviews = current_user.reviews.all
+  end
 
   private
   def user_params
