@@ -1,0 +1,38 @@
+<div class="review_header">
+  <h4>すべてのレビュー</h4>
+</div>
+<div class="review_wrap">
+
+  <% @my_reviews.each do |my_review| %>
+    <div class="review_box">
+      <div class="review_image">
+        <%= attachment_image_tag my_review, :image, :fill, 150, 150 %>
+      </div>
+
+      <div class="review_info">
+        <div>
+          <%= link_to my_review.shop.name, shop_path(my_review.shop.id) %>
+        </div>
+        <div class="review_title">
+          <%= my_review.title %>
+        </div>
+
+        <div class="review-rate" data-score="<%= my_review.rate %>"></div>
+
+        <div class="review_body">
+          <%= my_review.body %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>
+
+<script>
+  $('.my_review-rate').raty({
+    readOnly: true,
+    score:    function() {
+      return $(this).attr('data-score');
+    },
+    path: '/assets/'
+  });
+</script>
