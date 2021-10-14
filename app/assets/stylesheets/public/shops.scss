@@ -19,12 +19,18 @@
 
 .shop_box {
   display: flex;
+  overflow-wrap: normal;
   border: thick double #FAC559;
-  margin: 30px;
+  margin: 30px auto;
+  width: 70%;
   background-color: #FFF799;
   border-radius: 10px;
 }
 
+.shop_header {
+  width: 70%;
+  margin: auto;
+}
 .shop_image {
   padding: 30px;
 }
@@ -39,9 +45,13 @@ img {
   line-height: 2.5em;
 }
 
+.shop_name {
+  word-break: normal;
+}
+
 table {
-  margin: 30px 30px 30px 0;
-  width: 100%;
+  margin: 30px auto;
+  width: 70%;
   border: 1px solid #DF8C00;
   border-collapse: separate;
   border-radius: 10px;
@@ -116,4 +126,13 @@ td {
 .pagination>.active>span:hover {
   background: #FAC559;
   border-color: #FAC559;
+}
+
+.shop_show_box {
+  overflow-wrap: normal;
+  border: thick double #FAC559;
+  margin: 30px auto;
+  width: 70%;
+  background-color: #FFF799;
+  border-radius: 10px;
 }

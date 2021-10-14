@@ -3,7 +3,9 @@
 <div class="shop_wrap">
   <% @shops.each.with_index(1) do |shop, i| %>
 
-    <h2>第<%= i %>位</h2>
+    <div class="shop_header">
+      <h2>第<%= i %>位</h2>
+    </div>
 
     <div class="shop_box">
       <div class="shop_image">

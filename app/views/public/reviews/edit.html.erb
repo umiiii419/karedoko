@@ -1,3 +1,5 @@
+<%= stylesheet_link_tag "public/reviews", media: "all", 'data-turbolinks-track': 'reload' %>
+
 <h4>レビューの編集</h4>
 
 <%= form_with(model:[@shop, @review], url: shop_review_path(@shop, @review), local: true) do |f| %>
