@@ -1,4 +1,4 @@
-.wrapper_flex {
+.login_wrap {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -6,7 +6,7 @@
   margin-top: 20px;
 }
 
-.wrapper_login {
+.login_box {
   display: flex;
   flex-flow: column;
   align-items: center;
@@ -16,7 +16,7 @@
   background-color: #FFF799;
 }
 
-.title_login {
+.login_header {
   display: flex;
   justify-content: center;
   width: 100%;

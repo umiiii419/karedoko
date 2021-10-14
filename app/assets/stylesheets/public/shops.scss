@@ -1,12 +1,23 @@
-.search-box {
+.search_box {
   display: flex;
 }
 
-.shop-list {
+.search_table {
+  border: none;
+  border-radius: 0;
+}
+
+.search_td {
+  background-color: white;
+  border: none;
+  padding: 0;
+}
+
+.shop_wrap {
   margin: 0 20px;
 }
 
-.shop-box {
+.shop_box {
   display: flex;
   border: thick double #FAC559;
   margin: 30px;
@@ -14,11 +25,7 @@
   border-radius: 10px;
 }
 
-.shop-main {
-  display: flex;
-}
-
-.shop-image {
+.shop_image {
   padding: 30px;
 }
 
@@ -26,14 +33,13 @@ img {
   border-radius: 10px;
 }
 
-.shop-info {
-  width: 100%;
+.shop_info {
   display: inline-block;
-  margin: auto 50px;
+  margin: auto 0 auto 50px;
   line-height: 2.5em;
 }
 
-.t-shop {
+table {
   margin: 30px 30px 30px 0;
   width: 100%;
   border: 1px solid #DF8C00;
@@ -42,22 +48,22 @@ img {
   overflow: hidden;
 }
 
-.th-shop, .td-shop {
+tr {
+  border: solid 1px white;
+}
+
+th, td {
   padding: 5px 10px;
   border: 1px solid #F6AE54;
 }
 
-.th-shop {
+th {
   background-color: #FAC559;
 }
 
-.td-shop {
+td {
   padding-left: 25px;
   background-color: #FFF799;
-}
-
-.tr-shop {
-  border: solid 1px white;
 }
 
 .btn {
@@ -72,7 +78,7 @@ img {
 	color: #DF8C00;
 }
 
-.btn_shop {
+.shop_btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
@@ -95,7 +101,6 @@ img {
   color: #DF8C00;
 }
 
-/*ホバー時のデザイン*/
 .pagination>li>a:hover {
   border-radius: 15px;
   background-color: #FAC559;

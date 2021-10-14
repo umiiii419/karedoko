@@ -1,4 +1,4 @@
-.wrapper-flex {
+.user_wrap {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -6,14 +6,14 @@
   margin: 30px;
 }
 
-.wrapper-user {
+.user_box {
   text-align: center;
   width: 70%;
   background-color: #FFF799;
   height: 800px;
 }
 
-.title-user {
+.user_header {
   margin-bottom: 70px;
   background-color: #FAC559;
 }
@@ -22,22 +22,18 @@ h2 {
   margin: 0;
   padding: 20px;
 }
-.mypage-top {
-  display: flex;
-  margin-top: 20px;
-}
 
-.my-page-info {
+.user_mypage_info {
   line-height: 100px;
   font-size: 20px;
 }
 
-.t-mypage {
+.user_table {
   display: flex;
   justify-content: center;
 }
 
-.user-form {
+.user_form {
   display: flex;
   justify-content: center;
   margin-top: 100px;
@@ -47,7 +43,7 @@ img {
   border-radius: 1000px;
 }
 
-.user-info {
+.user_info {
   margin-left: 100px;
 }
 
@@ -79,7 +75,7 @@ input[type="submit"] {
   border: none;
 }
 
-.btn-user {
+.user_btn {
   cursor: pointer;
   display: flex;
   justify-content: center;
