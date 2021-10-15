@@ -20,7 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 h4 {
@@ -48,9 +47,8 @@ h2 {
 }
 
 img {
-  border-radius: 1000px;
+  border-radius: 90px;
 }
-
 
 #user_nickname {
   height: 30px;
@@ -100,4 +98,58 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+}
+
+.btn {
+	color: black;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+.btn:hover {
+	color: #DF8C00;
+}
+
+.my_review_header {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.my_review_box {
+  display: flex;
+  overflow-wrap: normal;
+  border: solid 1px #FAC559;
+  margin: 30px auto;
+  width: 50%;
+  background-color: #FFF799;
+  border-radius: 10px;
+}
+
+.my_review_image {
+  padding: 30px;
+}
+
+.my_review_info {
+  display: inline-block;
+  line-height: 2em;
+  padding: 20px;
+}
+
+.my_review_btn {
+  color: black;
+  font-size: 20px;
+  text-decoration: underline;
+}
+
+.my_review_btn:hover {
+	color: #DF8C00;
+}
+
+.my_review_shop_image {
+  border-radius: 0;
 }

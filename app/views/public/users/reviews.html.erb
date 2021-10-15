@@ -1,27 +1,27 @@
+<%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
 
-
-<div class="review_header">
-  <h4>すべてのレビュー</h4>
+<div class="my_review_header">
+  <h4>投稿したレビュー</h4>
 </div>
-<div class="review_wrap">
+<div class="my_review_wrap">
 
   <% @my_reviews.each do |my_review| %>
-    <div class="review_box">
-      <div class="review_image">
-        <%= attachment_image_tag my_review, :image, :fill, 150, 150 %>
+    <div class="my_review_box">
+      <div class="my_review_image">
+        <%= attachment_image_tag my_review, :image, :fill, 150, 150, class: "my_review_shop_image" %>
       </div>
 
-      <div class="review_info">
+      <div class="my_review_info">
         <div>
-          <%#= link_to my_review.shop.name, shop_path(@shop.id) %>
+          <%= link_to my_review.shop.name, shop_path(my_review.shop.id), class: "my_review_btn" %>
         </div>
-        <div class="review_title">
+        <div class="my_review_title">
           <%= my_review.title %>
         </div>
 
-        <div class="review-rate" data-score="<%= my_review.rate %>"></div>
+        <div class="my_review-rate" data-score="<%= my_review.rate %>"></div>
 
-        <div class="review_body">
+        <div class="my_review_body">
           <%= my_review.body %>
         </div>
       </div>
