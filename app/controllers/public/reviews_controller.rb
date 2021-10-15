@@ -1,5 +1,5 @@
 class Public::ReviewsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
 
   def new
     @shop = Shop.find(params[:shop_id])
@@ -9,11 +9,6 @@ class Public::ReviewsController < ApplicationController
   def index
     @shop = Shop.find(params[:shop_id])
     @reviews = Review.all
-  end
-
-  def show
-    @shop = Shop.find(params[:shop_id])
-    @review = Review.find(params[:id])
   end
 
   def edit
