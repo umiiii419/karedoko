@@ -20,7 +20,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 h4 {
@@ -50,7 +49,6 @@ h2 {
 img {
   border-radius: 1000px;
 }
-
 
 #user_nickname {
   height: 30px;
@@ -100,4 +98,19 @@ input[type="submit"] {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 0px;
+}
+
+.btn {
+	color: black;
+	font-size: 15px;
+	text-decoration: underline;
+}
+
+.btn:hover {
+	color: #DF8C00;
 }
