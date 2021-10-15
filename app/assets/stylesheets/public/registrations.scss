@@ -59,16 +59,16 @@
 }
 
 input[type="submit"] {
-    cursor: pointer;
-    display: inline-block;
-    width: 50%;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #FAC559;
-    border: none;
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #FAC559;
+  border: none;
 }
 
-a {
-  color: #FAC559;
+.signup_btn:hover {
+	color: #DF8C00;
 }

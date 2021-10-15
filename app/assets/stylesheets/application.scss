@@ -22,6 +22,11 @@
     font-family: 'Sawarabi Gothic', sans-serif;
  }
 
+a:hover {
+  color: #DF8C00;
+  text-decoration: none;
+}
+
 header {
   height: 150px;
   margin: 0;
@@ -103,4 +108,3 @@ footer {
   border-top: thick double #FAC559;
 	background: #FFF799;
 }
-
