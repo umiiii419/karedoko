@@ -1,7 +1,7 @@
 <%= stylesheet_link_tag "public/reviews", media: "all", 'data-turbolinks-track': 'reload' %>
 
 <div class="review_header">
-  <h4>すべてのレビュー</h4>
+  <h4><%= link_to @shop.name, shop_path(@shop), class: "review_user_name_link" %> のレビュー ( 全 <%= @shop.reviews.count %> 件 )</h4>
 </div>
 <div class="review_wrap">
 
@@ -12,14 +12,27 @@
       </div>
 
       <div class="review_info">
+        <div class="review_user_info">
+          <%= attachment_image_tag review.user, :profile_image, :fill, 64, 64, format: 'jpeg', fallback: "review_no_profile_image.jpeg", class: "review_user_image" %>
+          <div class="review_user_name">
+            <%= link_to review.user.nickname, users_my_page_path(review.user.id), class: "review_user_name_link" %>
+          </div>
+        </div>
+
         <div class="review_title">
-         <h4><%= link_to review.title, shop_review_path(@shop, review.id), class: "btn" %></h4>
+         <h4><%= review.title %></h4>
         </div>
 
         <div class="review-rate" data-score="<%= review.rate %>"></div>
 
         <div class="review_body">
           <%= review.body %>
+        </div>
+        <div class="review_btns">
+          <% if review.user == current_user %>
+            <%= link_to "投稿を編集する", edit_shop_review_path(@shop, review.id), class: "review_edit_btn" %>
+            <%= link_to "投稿を削除する", shop_review_path(@shop, review.id), method: :delete, class: "review_destroy_btn" %>
+          <% end %>
         </div>
       </div>
     </div>

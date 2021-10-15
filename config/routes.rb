@@ -22,7 +22,7 @@ Rails.application.routes.draw do
     get       "/shops/search_result", to: 'shops#search_result'
     get       "/shops/rank",          to: 'shops#rank'
     resources :shops,                 only: [:index, :show]   do
-      resources :reviews
+      resources :reviews,             only: [:index, :new, :create, :edit, :update, :destroy]
     end
   end
 

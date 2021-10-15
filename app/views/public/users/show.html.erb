@@ -3,7 +3,7 @@
 <div class="user_wrap">
   <div class="user_box">
     <div class="user_header">
-      <h4>マイページ</h4>
+      <h4><%= @user.nickname %> さんのプロフィール</h4>
     </div>
 
     <div class="user_profile_image">
@@ -24,7 +24,9 @@
           <td><%= link_to @user.reviews.count, users_reviews_path, class: "btn" %>件</td>
         </tr>
       </table>
-      <%= link_to " プロフィールを編集する", edit_users_path, class: "user_btn" %>
+      <% if @user.id == current_user.id %>
+        <%= link_to " プロフィールを編集する", edit_users_path, class: "user_btn" %>
+      <% end %>
     </div>
   </div>
 </div>

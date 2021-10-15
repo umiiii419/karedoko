@@ -1,5 +1,5 @@
 class Public::ReviewsController < ApplicationController
-  before_action :authenticate_user!, except: [:index, :show]
+  before_action :authenticate_user!, except: [:index]
 
   def new
     @shop = Shop.find(params[:shop_id])
@@ -9,11 +9,6 @@ class Public::ReviewsController < ApplicationController
   def index
     @shop = Shop.find(params[:shop_id])
     @reviews = Review.all
-  end
-
-  def show
-    @shop = Shop.find(params[:shop_id])
-    @review = Review.find(params[:id])
   end
 
   def edit
@@ -26,14 +21,14 @@ class Public::ReviewsController < ApplicationController
     @review = current_user.reviews.new(review_params)
     @review.shop_id = @shop.id
     @review.save
-    redirect_to shop_review_path(@shop, @review)
+    redirect_to shop_reviews_path(@shop)
   end
 
   def update
     @shop = Shop.find(params[:shop_id])
     @review = Review.find(params[:id])
     @review.update(review_params)
-    redirect_to shop_review_path(@shop, @review)
+    redirect_to shop_reviews_path(@shop)
   end
 
   def destroy
