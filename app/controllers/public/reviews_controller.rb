@@ -21,14 +21,14 @@ class Public::ReviewsController < ApplicationController
     @review = current_user.reviews.new(review_params)
     @review.shop_id = @shop.id
     @review.save
-    redirect_to shop_review_path(@shop, @review)
+    redirect_to shop_reviews_path(@shop)
   end
 
   def update
     @shop = Shop.find(params[:shop_id])
     @review = Review.find(params[:id])
     @review.update(review_params)
-    redirect_to shop_review_path(@shop, @review)
+    redirect_to shop_reviews_path(@shop)
   end
 
   def destroy

@@ -45,7 +45,7 @@ label {
 #review_title {
   width: 100%;
   height: 40px;
-  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 #review_body {
@@ -73,14 +73,14 @@ label {
 }
 
 input[type="submit"] {
-    cursor: pointer;
-    display: inline-block;
-    width: 50%;
-    height: 50px;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    background-color: #FAC559;
-    border: none;
+  cursor: pointer;
+  display: inline-block;
+  width: 50%;
+  height: 50px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #FAC559;
+  border: none;
 }
 
 .actions:hover {
@@ -101,7 +101,11 @@ input[type="submit"] {
   padding: 30px;
 }
 
-img {
+.attachment.user.profile_image {
+  border-radius: 90px;
+}
+
+.attachment.review.image{
   border-radius: 10px;
 }
 
@@ -140,4 +144,48 @@ img {
 
 .btn:hover {
 	color: #DF8C00;
+}
+
+h4 {
+  margin: 20px 0 10px 0;
+}
+
+.review_user_info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.review_user_name {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+a.btn {
+  padding: 0;
+}
+
+.review_user_name_link {
+  color: black;
+	font-size: 19px;
+}
+
+.review_user_name_link:hover {
+	color: #DF8C00;
+}
+
+.review_btns {
+  margin: 10px;
+}
+
+.review_edit_btn {
+  cursor: pointer;
+  color: black;
+  margin: 10px;
+}
+
+.review_destroy_btn {
+  cursor: pointer;
+  color: black;
+  margin: 10px;
 }
