@@ -70,6 +70,7 @@ img {
 input[type="submit"] {
   cursor: pointer;
   display: inline-block;
+  color: black;
   width: 50%;
   height: 50px;
   margin: 20px auto;
@@ -90,13 +91,13 @@ input[type="submit"] {
   border: none;
 }
 
+.user_btn:hover {
+	color: #DF8C00;
+}
+
 .warning {
   height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.unsubscribe_btn {
-  line-height: 200px;
 }

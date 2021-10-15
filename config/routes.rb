@@ -17,6 +17,7 @@ Rails.application.routes.draw do
     get       "/users/my_page",       to: 'users#show'
     get       "/users/unsubscribe",   to: 'users#unsubscribe'
     patch     "/users/withdrawal",    to: 'users#withdrawal'
+    get       "/users/reviews",       to: 'users#reviews'
     resource  :users,                 only: [:edit,  :update]
     get       "/shops/search_result", to: 'shops#search_result'
     get       "/shops/rank",          to: 'shops#rank'

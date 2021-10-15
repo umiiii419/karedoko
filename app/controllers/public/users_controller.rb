@@ -26,9 +26,13 @@ class Public::UsersController < ApplicationController
     redirect_to root_path
   end
 
+  def reviews
+    @my_reviews = current_user.reviews.all
+  end
+
   private
   def user_params
-    params.require(:user).permit(:nickname, :pofile_image, :introduction, :email)
+    params.require(:user).permit(:nickname, :profile_image, :introduction, :email)
   end
 
 end
