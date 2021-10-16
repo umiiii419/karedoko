@@ -1,0 +1,29 @@
+<%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
+
+<div class="user_wrap">
+  <div class="user_box">
+    <div class="user_header">
+      <h4><%= @user.nickname %> さんのプロフィール</h4>
+    </div>
+
+    <div class="user_profile_image">
+      <%= attachment_image_tag @profile, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+    </div>
+
+    <div class="user_mypage_info">
+      <div>
+        <h4><%= @profile.nickname %></h4>
+      </div>
+      <div>
+        <h4><%= @prifile.introduction %></h4>
+      </div>
+
+      <table class="user_table">
+        <tr>
+          <th>投稿したレビュー</th>
+          <td><%= link_to @profile.reviews.count, users_reviews_path, class: "btn" %>件</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
