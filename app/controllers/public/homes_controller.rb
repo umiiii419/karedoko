@@ -4,6 +4,9 @@ class Public::HomesController < ApplicationController
   def top
   end
 
+  def about
+  end
+
   def set_search
     @q = Shop.ransack(params[:q])
     @results = @q.result

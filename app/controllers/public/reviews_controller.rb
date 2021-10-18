@@ -1,5 +1,5 @@
 class Public::ReviewsController < ApplicationController
-  before_action :authenticate_user!, except: [:index]
+  before_action :authenticate_user!
 
   def new
     @shop = Shop.find(params[:shop_id])
