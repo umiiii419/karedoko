@@ -1,7 +1,7 @@
 <div class="header-top">
   <h1 class="logo">カレドコ</h1>
   <%= link_to "トップ",     root_path,                                  class: "btn-top" %>
-  <%= link_to "マイページ", users_my_page_path,                         class: "btn-top" %>
+  <%= link_to "マイページ", users_my_page_path(current_user),           class: "btn-top" %>
   <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "btn-top"%>
 </div>
 <div class="header-bottom">

@@ -150,10 +150,15 @@ h4 {
   margin: 20px 0 10px 0;
 }
 
+.review_body {
+  margin-bottom: 10px;
+}
+
 .review_user_info {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: solid 1px #FAC559;
 }
 
 .review_user_name {
@@ -175,13 +180,13 @@ a.btn {
 }
 
 .review_btns {
-  margin: 10px;
+  padding: 10px 0;
+  border-top: solid 1px #FAC559;
 }
 
 .review_edit_btn {
   cursor: pointer;
   color: black;
-  margin: 10px;
 }
 
 .review_destroy_btn {

@@ -1,32 +1,33 @@
 <%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
 
-<div class="user_wrap">
-  <div class="user_box">
-    <div class="user_header">
-      <h4><%= @user.nickname %> さんのプロフィール</h4>
-    </div>
 
-    <div class="user_profile_image">
-      <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
-    </div>
-
-    <div class="user_mypage_info">
-      <div>
-        <h4><%= @user.nickname %></h4>
-      </div>
-      <div>
-        <h4><%= @user.introduction %></h4>
+  <div class="user_wrap">
+    <div class="user_box">
+      <div class="user_header">
+        <h4>マイページ</h4>
       </div>
 
-      <table class="user_table">
-        <tr>
-          <th>投稿したレビュー</th>
-          <td><%= link_to @user.reviews.count, users_reviews_path, class: "btn" %>件</td>
-        </tr>
-      </table>
-      <% if @user.id == current_user.id %>
-        <%= link_to " プロフィールを編集する", edit_users_path, class: "user_btn" %>
-      <% end %>
+      <div class="user_profile_image">
+        <%= attachment_image_tag @user, :profile_image, :fill, 100, 100, format: 'jpeg', fallback: "no_profile_image.jpeg" %>
+      </div>
+
+      <div class="user_mypage_info">
+        <div>
+          <h4><%= @user.nickname %></h4>
+        </div>
+        <div>
+          <h4><%= @user.introduction %></h4>
+        </div>
+
+        <table class="user_table">
+          <tr>
+            <th>投稿したレビュー</th>
+            <td><%= link_to @user.reviews.count, users_reviews_path(@user.id), class: "btn" %>件</td>
+          </tr>
+        </table>
+        <% if @user.id == current_user.id %>
+          <%= link_to " プロフィールを編集する", edit_users_path, class: "user_btn" %>
+        <% end %>
+      </div>
     </div>
   </div>
-</div>

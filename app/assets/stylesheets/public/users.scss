@@ -121,7 +121,6 @@ table {
 }
 
 .my_review_box {
-  display: flex;
   overflow-wrap: normal;
   border: solid 1px #FAC559;
   margin: 30px auto;
@@ -130,8 +129,18 @@ table {
   border-radius: 10px;
 }
 
+.my_review_container {
+  display: flex;
+}
+
 .my_review_image {
   padding: 30px;
+  text-align: center;
+}
+
+.my_review_shop_name {
+  padding: 10px;
+  border-bottom: solid 1px #FAC559;
 }
 
 .my_review_info {
@@ -143,7 +152,6 @@ table {
 .my_review_btn {
   color: black;
   font-size: 20px;
-  text-decoration: underline;
 }
 
 .my_review_btn:hover {
@@ -152,4 +160,26 @@ table {
 
 .my_review_shop_image {
   border-radius: 10px;
+}
+
+.review_user_info {
+  display: flex;
+  align-items: center;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid 1px #FAC559;
+}
+
+.review_user_name {
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.review_user_name_link {
+  color: black;
+	font-size: 19px;
+}
+
+.review_user_name_link:hover {
+	color: #DF8C00;
 }
