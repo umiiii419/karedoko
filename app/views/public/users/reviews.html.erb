@@ -1,20 +1,29 @@
 <%= stylesheet_link_tag "public/users", media: "all", 'data-turbolinks-track': 'reload' %>
 
 <div class="my_review_header">
-  <h4>投稿したレビュー</h4>
+  <h4>投稿したレビュー ( <%= @user.reviews.count %> 件 )</h4>
 </div>
 <div class="my_review_wrap">
 
   <% @my_reviews.each do |my_review| %>
     <div class="my_review_box">
-      <div class="my_review_image">
-        <%= attachment_image_tag my_review, :image, :fill, 150, 150, class: "my_review_shop_image" %>
+      <div class="my_review_shop_name">
+        <%= link_to my_review.shop.name, shop_path(my_review.shop.id), class: "my_review_btn" %>
       </div>
 
-      <div class="my_review_info">
-        <div>
-          <%= link_to my_review.shop.name, shop_path(my_review.shop.id), class: "my_review_btn" %>
+      <div class="my_review_container">
+        <div class="my_review_image">
+          <%= attachment_image_tag my_review, :image, :fill, 150, 150, class: "my_review_shop_image" %>
         </div>
+
+        <div class="my_review_info">
+          <div class="review_user_info">
+            <%= attachment_image_tag my_review.user, :profile_image, :fill, 64, 64, format: 'jpeg', fallback: "review_no_profile_image.jpeg", class: "review_user_image" %>
+          <div class="review_user_name">
+            <%= link_to my_review.user.nickname, users_my_page_path(my_review.user.id), class: "review_user_name_link" %>
+          </div>
+         </div>
+
         <div class="my_review_title">
           <%= my_review.title %>
         </div>
@@ -24,6 +33,8 @@
         <div class="my_review_body">
           <%= my_review.body %>
         </div>
+      </div>
+
       </div>
     </div>
   <% end %>

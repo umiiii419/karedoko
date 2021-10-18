@@ -8,37 +8,39 @@
     </div>
 
     <div class="shop_box">
-      <div class="shop_image">
-        <%= attachment_image_tag shop, :image, :fill, 200, 200 %>
+      <div class="shop_name">
+        <%= link_to shop.name, shop_path(shop.id), class: "btn" %>
       </div>
 
-      <div class="shop_info">
-        <div>
-          <h2><%= link_to shop.name, shop_path(shop.id), class: "btn" %></h2>
+      <div class="shop_container">
+        <div class="shop_image">
+          <%= attachment_image_tag shop, :image, :fill, 200, 200 %>
         </div>
 
-        <div>
-          <% if shop.reviews.blank? %>
-            <% average_review = 0 %>
-          <% else %>
-            <% average_review = shop.reviews.average(:rate).round(2) %>
-          <% end %>
-          <div class="average-review-rate" data-score=<%= average_review %>></div>
-          <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "btn" %> 件 )</span>
-        </div>
+        <div class="shop_info">
+          <div>
+            <% if shop.reviews.blank? %>
+              <% average_review = 0 %>
+            <% else %>
+              <% average_review = shop.reviews.average(:rate).round(2) %>
+            <% end %>
+            <div class="average-review-rate" data-score=<%= average_review %>></div>
+            <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "btn" %> 件 )</span>
+          </div>
 
-        <div>
-          <%= shop.genre.name %>
-        </div>
+          <div>
+            <%= shop.genre.name %>
+          </div>
 
-        <div>
-          <%= shop.nearest_station %>
-        </div>
+          <div>
+            <%= shop.nearest_station %>
+          </div>
 
-        <div>
-          <%= shop.is_deleted ? '営業中' : '閉店' %>
+          <div>
+            <%= shop.is_deleted ? '営業中' : '閉店' %>
+          </div>
         </div>
-
+        
       </div>
     </div>
 
