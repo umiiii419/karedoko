@@ -1,8 +1,8 @@
 class Public::UsersController < ApplicationController
-  before_action :authenticate_user!, except: [:show, :reviews]
+  before_action :authenticate_user!
 
   def show
-    @user = current_user
+    @user = User.find(params[:id])
   end
 
   def edit
@@ -27,7 +27,8 @@ class Public::UsersController < ApplicationController
   end
 
   def reviews
-    @my_reviews = current_user.reviews.all
+    @user = User.find(params[:id])
+    @my_reviews = @user.reviews.all
   end
 
   private

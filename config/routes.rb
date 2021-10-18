@@ -14,10 +14,10 @@ Rails.application.routes.draw do
 
   scope module: :public do
     root to:  'homes#top'
-    get       "/users/my_page",       to: 'users#show'
+    get       "/users/my_page/:id",   to: 'users#show',       as: 'users_my_page'
+    get       "/users/reviews/:id",   to: 'users#reviews',    as: 'users_reviews'
     get       "/users/unsubscribe",   to: 'users#unsubscribe'
     patch     "/users/withdrawal",    to: 'users#withdrawal'
-    get       "/users/reviews",       to: 'users#reviews'
     resource  :users,                 only: [:edit,  :update]
     get       "/shops/search_result", to: 'shops#search_result'
     get       "/shops/rank",          to: 'shops#rank'
