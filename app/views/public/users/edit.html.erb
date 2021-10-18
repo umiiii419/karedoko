@@ -8,7 +8,7 @@
     <%= form_with model:@user, url: users_path, local: true do |f| %>
       <div class="user_form">
         <div class="user_profile_image">
-          <%= attachment_image_tag @user, :profile_image, :fill, 50, 50, fallback: "no_profile_image.jpeg" %>
+          <%= attachment_image_tag @user, :profile_image, :fill, 150, 150, fallback: "no_profile_image.jpeg" %>
           <%= f.attachment_field :profile_image %>
         </div>
 
