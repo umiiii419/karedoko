@@ -28,23 +28,29 @@ a:hover {
 }
 
 header {
-  height: 150px;
+  height: 120px;
   margin: 0;
 }
 
-.header-top {
+.header_top {
   height: 60px;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   background: #FFF799;
 }
-
-.logo {
-  font-family: 'Dela Gothic One', cursive;
+.header_top_left {
+  display: flex;
   margin: 10px auto 10px 10px;
 }
 
+.logo {
+  font-family: 'Dela Gothic One', cursive;
+}
+
+.header_explain {
+  margin: auto 20px;
+}
 .nav-top {
   margin-right: 20px;
   font-size: 19px;
@@ -53,7 +59,6 @@ header {
 .header-bottom {
   height: 60px;
   display: flex;
-  border-bottom: thick double #FAC559;
   justify-content: space-around;
   align-items: center;
   background: #FFF799;
@@ -104,6 +109,5 @@ aside {
 
 footer {
   height: 50px;
-  border-top: thick double #FAC559;
 	background: #FFF799;
 }
