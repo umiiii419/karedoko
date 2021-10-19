@@ -26,11 +26,14 @@
       <% elsif admin_signed_in? %>
         <%= render partial: "admins/header" %>
       <% else %>
-        <div class="header-top">
-          <h1 class="logo">カレドコ</h1>
+        <div class="header_top">
+          <div class="header_top_left">
+            <h1 class="logo">カレドコ</h1>
+            <p class="header_explain">あなたにぴったりのカレー屋が検索できるレビューサイト</p>
+          </div>
           <%= link_to "トップページ", root_path,                  class: "btn-top" %>
           <%= link_to "カレドコとは", about_path,                 class: "btn-top" %>
-          <%= link_to "新規登録",     new_user_registration_path, class: "btn-top" %>
+          <%= link_to "無料会員登録",     new_user_registration_path, class: "btn-top" %>
           <%= link_to "ログイン",     new_user_session_path,      class: "btn-top" %>
         </div>
         <div class="header-bottom">

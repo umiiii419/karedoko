@@ -2,21 +2,44 @@
   background-image: image-url('top.jpg');
   background-size: cover;
   background-position: center;
-  width: 80%;
-  height: 400px;
+  width: 100%;
+  height: 100%;
   margin: auto;
 }
 
 .top_contents {
-  height: 100%;
+  height: 75%;
   display: flex;
-  justify-content: flex-start;
-  margin-left: 90px;
-  align-items: center;
+  justify-content: center;
+  margin-right: 90px;
+  padding-top: 260px;
   font-size: 35px;
-  color: black;
+  color: white;
+}
+
+.top_title {
+  margin: 0;
 }
 
 .top_search_contents {
   margin-left: 30px;
+}
+
+.about_background_image {
+  background-image: image-url('about.jpeg');
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  height: 800px;
+  margin: auto;
+}
+
+.about_contents {
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
 }
