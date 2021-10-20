@@ -3,7 +3,7 @@
   align-items: center;
   justify-content: center;
   position: relative;
-  margin-bottom: 30px;
+  margin: 30px;
 }
 
 .review_new_box {
@@ -13,7 +13,8 @@
   justify-content: center;
   font-size: 14px;
   width: 50%;
-  background-color: #FFF799;
+  background-color: #fffdf0;
+  border: solid 1px #e1e1e1;
 }
 
 .review_new_header {
@@ -23,7 +24,8 @@
   width: 100%;
   height: 50px;
   margin-bottom: 40px;
-  background-color: #FAC559;
+  background-color: #fff8d4;
+  border-bottom: solid 1px #e1e1e1;
 }
 
 .review_new_form {
@@ -46,12 +48,28 @@ label {
   width: 100%;
   height: 40px;
   margin-bottom: 5px;
+  border: solid 0.5px #a9a9a9;
+  border-radius: 4px;
+}
+
+#review_title:focus {
+  border: 2px solid #FAC559;
+  z-index: 10;
+  outline: 0;
 }
 
 #review_body {
   width: 100%;
   height: 100px;
   margin-top: 5px;
+  border: solid 0.5px #a9a9a9;
+  border-radius: 4px;
+}
+
+#review_body:focus {
+  border: 2px solid #FAC559;
+  z-index: 10;
+  outline: 0;
 }
 
 #review_stars {
@@ -81,6 +99,7 @@ input[type="submit"] {
   margin-bottom: 20px;
   background-color: #FAC559;
   border: none;
+  border-radius: 4px;
 }
 
 .actions:hover {
@@ -90,11 +109,10 @@ input[type="submit"] {
 .review_box {
   display: flex;
   overflow-wrap: normal;
-  border: solid 1px #FAC559;
+  border: solid 1px #e1e1e1;
   margin: 30px auto;
   width: 50%;
-  background-color: #FFF799;
-  border-radius: 10px;
+  background-color: #fffadd;
 }
 
 .review_image {
@@ -130,6 +148,7 @@ input[type="submit"] {
   height: 50px;
   margin: 20px auto;
   background-color: #FAC559;
+  border-radius: 4px;
 }
 
 .review_btn:hover {
@@ -140,6 +159,7 @@ input[type="submit"] {
   color: black;
 	font-size: 19px;
 	text-decoration: underline;
+	border-radius: 4px;
 }
 
 .btn:hover {
@@ -158,7 +178,7 @@ h4 {
   display: flex;
   align-items: center;
   padding-bottom: 10px;
-  border-bottom: solid 1px #FAC559;
+  border-bottom: solid 1px #e7db9b;
 }
 
 .review_user_name {
@@ -181,7 +201,8 @@ a.btn {
 
 .review_btns {
   padding: 10px 0;
-  border-top: solid 1px #FAC559;
+  border-top: solid 1px #e7db9b;
+  border-radius: 4px;
 }
 
 .review_edit_btn {

@@ -22,13 +22,17 @@
     font-family: 'Sawarabi Gothic', sans-serif;
  }
 
+a {
+  color: black;
+}
+
 a:hover {
   color: #DF8C00;
   text-decoration: none;
 }
 
 header {
-  height: 120px;
+  height: 60px;
   margin: 0;
 }
 
@@ -46,6 +50,7 @@ header {
 
 .logo {
   font-family: 'Dela Gothic One', cursive;
+  color: black;
 }
 
 .header_explain {
@@ -56,15 +61,7 @@ header {
   font-size: 19px;
 }
 
-.header-bottom {
-  height: 60px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background: #FFF799;
-}
-
-.btn-top {
+.header_btn {
   text-decoration: none;
   font-weight: bold;
   font-size: 15px;
@@ -73,20 +70,7 @@ header {
   transition: 0.3s;
 }
 
-.btn-top:hover {
-	color: #DF8C00;
-}
-
-.btn-bottom {
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 20px;
-  color: black;
-  margin-left: 20px;
-  transition: 0.3s;
-}
-
-.btn-bottom:hover {
+.header_btn:hover {
 	color: #DF8C00;
 }
 

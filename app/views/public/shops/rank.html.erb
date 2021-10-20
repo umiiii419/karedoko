@@ -1,14 +1,12 @@
 <%= stylesheet_link_tag "public/shops", media: "all", 'data-turbolinks-track': 'reload' %>
 
 <div class="shop_wrap">
+  <h3>ランキング</h3>
   <% @shops.each.with_index(1) do |shop, i| %>
-
-    <div class="shop_header">
-      <h2>第<%= i %>位</h2>
-    </div>
 
     <div class="shop_box">
       <div class="shop_name">
+        <h4><%= i %>位</h4>
         <%= link_to shop.name, shop_path(shop.id), class: "btn" %>
       </div>
 
@@ -25,7 +23,7 @@
               <% average_review = shop.reviews.average(:rate).round(2) %>
             <% end %>
             <div class="average-review-rate" data-score=<%= average_review %>></div>
-            <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "btn" %> 件 )</span>
+            <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "review_count_btn" %> 件 )</span>
           </div>
 
           <div>
