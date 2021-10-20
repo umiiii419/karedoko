@@ -25,7 +25,7 @@
               <% average_review = shop.reviews.average(:rate).round(2) %>
             <% end %>
             <div class="average-review-rate" data-score=<%= average_review %>></div>
-            <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "btn" %> 件 )</span>
+            <span>( レビュー <%= link_to shop.reviews.count, shop_reviews_path(shop), class: "review_count_btn" %> 件 )</span>
           </div>
 
           <div>

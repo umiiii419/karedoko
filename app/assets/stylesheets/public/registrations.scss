@@ -13,7 +13,8 @@
   justify-content: center;
   font-size: 14px;
   width: 50%;
-  background-color: #FFF799;
+  background-color: #fffdf0;
+  border: solid 1px #e1e1e1;
 }
 
 .signup_header {
@@ -23,35 +24,26 @@
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
-  background-color: #FAC559;
+  background-color: #fff8d4;
+  border-bottom: solid 1px #e1e1e1;
 }
 
 .signup_form {
   width: 50%;
 }
 
-#user_email {
+.field input {
   width: 100%;
   height: 30px;
-  margin-top: 5px;
+  margin-bottom: 10px;
+  border: solid 0.5px #a9a9a9;
+  border-radius: 4px;
 }
 
-#user_nickname {
-  width: 100%;
-  height: 30px;
-  margin-top: 5px;
-}
-
-#user_password {
-  width: 100%;
-  height: 30px;
-  margin-top: 5px;
-}
-
-#user_password_confirmation {
-  width: 100%;
-  height: 30px;
-  margin-top: 5px;
+.field input:focus {
+  border: 2px solid #FAC559;
+  z-index: 10;
+  outline: 0;
 }
 
 .actions {
@@ -68,6 +60,7 @@ input[type="submit"] {
   margin-bottom: 20px;
   background-color: #FAC559;
   border: none;
+  border-radius: 4px;
 }
 
 .signup_btn:hover {

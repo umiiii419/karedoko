@@ -9,18 +9,20 @@
 
 table {
   width: 100%;
+  height: 100px;
 }
 
-#q_name_or_name_kana_cont {
+.search_td input[type='search'] {
   height: 50px;
   width: 98%;
-  border: solid 1px;
+  border: solid 0.5px #a9a9a9;
+  border-radius: 4px;
 }
 
-#q_address_or_nearest_station_cont {
-  height: 50px;
-  width: 98%;
-  border: solid 1px;
+.search_td input[type='search']:focus {
+  border: 2px solid #FAC559;
+  z-index: 10;
+  outline: 0;
 }
 
 #q_genre_id_eq {
@@ -30,6 +32,15 @@ table {
   display: inline-block;
   height: 50px;
   width: 98%;
+  border: solid 0.5px #a9a9a9;
+  border-radius: 4px;
+  color: #a9a9a9;
+}
+
+.search_td #q_genre_id_eq:focus {
+  border: 2px solid #FAC559;
+  z-index: 10;
+  outline: 0;
 }
 
 input[type="submit"] {
@@ -39,6 +50,7 @@ input[type="submit"] {
   height: 50px;
   background-color: #FAC559;
   border: none;
+  border-radius: 4px;
 }
 
 .search_btn:hover {

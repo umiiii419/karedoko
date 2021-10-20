@@ -14,16 +14,25 @@
 }
 
 .shop_wrap {
-  margin: 0 20px;
+  margin: 30px;
+}
+
+h3 {
+  width: 50%;
+  margin: 30px auto;
+}
+
+h4 {
+  font-size: 20px;
+  margin-right: 10px;
 }
 
 .shop_box {
   overflow-wrap: normal;
-  border: solid 1px #FAC559;
+  border: solid 1px #e1e1e1;
   margin: 30px auto;
   width: 50%;
-  background-color: #FFF799;
-  border-radius: 10px;
+  background-color: #fffdf0;
 }
 
 .shop_container {
@@ -35,13 +44,20 @@
   margin: auto;
 }
 
-.shop_name {
-  padding: 10px;
-  border-bottom: solid 1px #FAC559;
+.shop_image {
+  text-align: center;
+  margin: auto 10px;
 }
 
-.shop_image {
-  padding: 30px;
+.shop_name {
+  padding: 10px;
+  border-bottom: solid 1px #e1e1e1;
+  display: flex;
+  background-color: #fff8d4;
+}
+
+.attachment.shop.image {
+  width: 80%;
 }
 
 img {
@@ -59,39 +75,51 @@ img {
 
 table {
   margin: 30px auto;
-  width: 70%;
-  border: 1px solid #DF8C00;
+  width: 80%;
+  height: 600px;
   border-collapse: separate;
-  border-radius: 10px;
   overflow: hidden;
 }
 
-tr {
-  border: solid 1px white;
+.th:last-of-type {
+  border-bottom: none;
+}
+
+.td:last-of-type {
+  border-bottom: none;
 }
 
 th, td {
   padding: 5px 10px;
-  border: 1px solid #F6AE54;
+  border-bottom: solid 0.5px #f5e9ac;
 }
 
 th {
-  background-color: #FAC559;
+  background-color: #fff8d4;
+  padding-left: 30px;
 }
 
 td {
   padding-left: 25px;
-  background-color: #FFF799;
+  background-color: #fff8d4;
 }
 
 .btn {
 	color: black;
 	font-size: 20px;
+	border-radius: 4px;
 }
 
 .btn:hover {
 	color: #DF8C00;
 }
+
+.review_count_btn {
+  color: black;
+	font-size: 18px;
+	border-radius: 4px;
+}
+
 
 .shop_btn {
   cursor: pointer;
@@ -103,6 +131,7 @@ td {
   height: 50px;
   margin: 20px auto;
   background-color: #FAC559;
+  border-radius: 4px;
 }
 
 .shop_btn:hover {
@@ -139,13 +168,18 @@ td {
 
 .shop_show_box {
   overflow-wrap: normal;
-  border: solid 1px #FAC559;
+  border: solid 1px #e1e1e1;
   margin: 30px auto;
-  width: 70%;
-  background-color: #FFF799;
-  border-radius: 10px;
+  width: 80%;
+  background-color: #fffdf0;
 }
 
 .shop_show_image {
-  margin: 30px 0 10px 65px;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.shop_show_title {
+  width: 80%;
 }

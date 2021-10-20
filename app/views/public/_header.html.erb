@@ -1,14 +1,11 @@
 <div class="header_top">
   <div class="header_top_left">
-    <h1 class="logo">カレドコ</h1>
+    <h1 class="logo"><%= link_to "カレドコ", root_path %></h1>
     <p class="header_explain">あなたにぴったりのカレー屋が検索できるレビューサイト</p>
   </div>
-  <%= link_to "トップページ", root_path,                                  class: "btn-top" %>
-  <%= link_to "カレドコとは", about_path,                                 class: "btn-top" %>
-  <%= link_to "マイページ",   users_my_page_path(current_user),           class: "btn-top" %>
-  <%= link_to "ログアウト",   destroy_user_session_path, method: :delete, class: "btn-top"%>
-</div>
-<div class="header-bottom">
-  <%= link_to "検索",       shops_path,      class: "btn-bottom" %>
-  <%= link_to "ランキング", shops_rank_path, class: "btn-bottom" %>
+  <%= link_to "カレドコとは", about_path,                                 class: "header_btn" %>
+  <%= link_to "検索",       shops_path,                                   class: "header_btn" %>
+  <%= link_to "ランキング", shops_rank_path,                              class: "header_btn" %>
+  <%= link_to "マイページ",   users_my_page_path(current_user),           class: "header_btn" %>
+  <%= link_to "ログアウト",   destroy_user_session_path, method: :delete, class: "header_btn"%>
 </div>
