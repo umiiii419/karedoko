@@ -6,7 +6,7 @@
 
 <div class="shop_wrap">
   <% @results.each do |shop| %>
-  
+
     <div class="shop_box">
       <div class="shop_name">
         <%= link_to shop.name, shop_path(shop.id), class: "btn" %>
@@ -50,7 +50,9 @@
 $('.average-review-rate').empty();
   $('.average-review-rate').raty({
     readOnly: true,
-    path: '/assets/',
+    starOn:   "<%= asset_path('star-on.png') %>",
+    starOff:  "<%= asset_path('star-off.png') %>",
+    starHalf: "<%= asset_path('star-half.png') %>",
     score: function() {
       return $(this).attr('data-score')
     }
