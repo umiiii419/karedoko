@@ -2,8 +2,12 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def after_sign_in_path_for(resource)
-    #後でadminとユーザーに分ける
-    root_path
+    case resource
+    when Admin
+      admins_shops_path
+    when User
+      root_path
+    end
   end
 
   def after_sign_out_path_for(resource)
