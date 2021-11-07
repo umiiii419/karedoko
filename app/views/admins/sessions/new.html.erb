@@ -9,8 +9,8 @@
     <div class="login_form">
       <%= form_with model:@admin, url: admin_session_path, local: true do |f| %>
         <div class="field">
-          <%= f.label :email, "ID" %><br />
-          <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+          <%= f.label :name, "管理者ID" %><br />
+          <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
         </div>
 
         <div class="field">
