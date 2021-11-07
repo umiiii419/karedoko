@@ -4,8 +4,8 @@
     <p class="header_explain">あなたにぴったりのカレー屋が検索できるレビューサイト</p>
   </div>
   <%= link_to "カレドコとは", about_path,                                 class: "header_btn" %>
-  <%= link_to "検索",       shops_path,                                   class: "header_btn" %>
-  <%= link_to "ランキング", shops_rank_path,                              class: "header_btn" %>
+  <%= link_to "検索",         shops_path,                                 class: "header_btn" %>
+  <%= link_to "ランキング",   shops_rank_path,                            class: "header_btn" %>
   <%= link_to "マイページ",   users_my_page_path(current_user),           class: "header_btn" %>
   <%= link_to "ログアウト",   destroy_user_session_path, method: :delete, class: "header_btn"%>
 </div>
